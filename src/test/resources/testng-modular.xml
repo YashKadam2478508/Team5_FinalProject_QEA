@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- Modular suite: each test class opens its own browser -->
+<suite name="IndiaMart - Modular Test Suite" verbose="1">
+
+    <!-- Sprint 1: Car Wash Services (ACTIVE) -->
+    <test name="Sprint1 - Car Wash Services">
+        <classes>
+            <class name="org.example.tests.TC01_CarWashServicesTest"/>
+        </classes>
+    </test>
+
+    <!-- Sprint 2: Free Listing Form Validation -->
+<!--    <test name="Sprint2 - Free Listing Form">-->
+<!--        <classes>-->
+<!--            <class name="org.example.tests.TC03_FreeListingFormTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <!-- Sprint 3: Fitness > Gym Sub-Menu -->
+<!--    <test name="Sprint3 - Fitness Gym Menu">-->
+<!--        <classes>-->
+<!--            <class name="org.example.tests.TC02_FitnessCenterTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
