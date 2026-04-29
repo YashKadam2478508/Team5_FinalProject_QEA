@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- Default suite: End-to-End flow, single browser session -->
+<suite name="IndiaMart - End-to-End Suite" verbose="1" thread-count="1">
+
+    <test name="End-to-End IndiaMart Flow">
+        <classes>
+            <class name="org.example.tests.EndToEndIndiaMartFlowTest"/>
+        </classes>
+    </test>
+
+</suite>
