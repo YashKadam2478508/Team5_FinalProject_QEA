@@ -8,4 +8,7 @@ public class IndiaMartFreeListingPage extends BasePage {
 
     private WebDriver driver;
 
+    public IndiaMartFreeListingPage(WebDriver driver) {
+        super(driver);
+    }
 }
