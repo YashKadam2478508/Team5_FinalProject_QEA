@@ -60,6 +60,9 @@ public class IndiaMartResultsPage extends BasePage {
         System.out.println("  [Filter] On-site applied.");
     }
 
+
+    // ── YG's methods (TF-27) : Display ───────────────────────────────────
+
     public void displayTop5Listings() {
         List<WebElement> cards = driver.findElements(By.cssSelector(".card.brs5"));
         System.out.println("\n===== CAR WASHING SERVICES IN CHENNAI =====");
@@ -107,17 +110,18 @@ public class IndiaMartResultsPage extends BasePage {
                 }
             }
         }
+        System.out.println("===========================================\n");
     }
 
     public String extractListingName(WebElement card) {
         String[] xpaths = {
-                ".//h2",
-                ".//a[contains(@class,'cardTitle')]",
-                ".//p[contains(@class,'lcName')]",
-                ".//span[contains(@class,'lcName')]",
-                ".//div[contains(@class,'companyName')]",
-                ".//p[contains(@class,'p-name')]",
-                ".//span[contains(@class,'title')]"
+            ".//h2",
+            ".//a[contains(@class,'cardTitle')]",
+            ".//p[contains(@class,'lcName')]",
+            ".//span[contains(@class,'lcName')]",
+            ".//div[contains(@class,'companyName')]",
+            ".//p[contains(@class,'p-name')]",
+            ".//span[contains(@class,'title')]"
         };
         for (String xpath : xpaths) {
             List<WebElement> found = card.findElements(By.xpath(xpath));
