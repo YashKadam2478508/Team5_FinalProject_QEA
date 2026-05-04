@@ -35,4 +35,13 @@ public class IndiaMartHomePage extends BasePage {
         wait.until(d -> js.executeScript("return document.readyState").equals("complete"));
         System.out.println("  [Home] Searched: " + keyword + " | URL: " + driver.getCurrentUrl());
     }
+
+    public void clickFreeListing() {
+        handlePopupIfVisible();
+        WebElement freeListingBtn = wait.until(
+                ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='ch_sell']")));
+        safeClick(freeListingBtn);
+        wait.until(d -> js.executeScript("return document.readyState").equals("complete"));
+        System.out.println("  [Home] Free Listing clicked. URL: " + driver.getCurrentUrl());
+    }
 }
