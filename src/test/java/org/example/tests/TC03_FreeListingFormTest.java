@@ -5,12 +5,14 @@ import org.example.base.BaseTest;
 import org.example.pages.IndiaMartHomePage;
 import org.example.pages.IndiaMartFreeListingPage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.FileInputStream;
@@ -19,6 +21,7 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.Properties;
 
+@Listeners(org.example.utils.ExtentTestListener.class)
 public class TC03_FreeListingFormTest extends BaseTest {
 
     private IndiaMartHomePage      homePage;
@@ -49,6 +52,9 @@ public class TC03_FreeListingFormTest extends BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
         homePage        = new IndiaMartHomePage(driver);
         freeListingPage = new IndiaMartFreeListingPage(driver);
+    }
+    public static WebDriver getDriver(){
+        return driver;
     }
 
     // ── TF-31 (YK) : Navigate to Free Listing ────────────────────────────
