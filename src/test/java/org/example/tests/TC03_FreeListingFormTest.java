@@ -4,8 +4,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.example.base.BaseTest;
 import org.example.pages.IndiaMartHomePage;
 import org.example.pages.IndiaMartFreeListingPage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -77,12 +80,16 @@ public class TC03_FreeListingFormTest extends BaseTest {
         freeListingPage.enterInvalidPhone(invalidPhone);
         System.out.println("Step 4 | PASS | Invalid phone '" + invalidPhone + "' entered.");
     }
+    @Test(priority = 5, dependsOnMethods = "handleT0901PopupAndEnterMobile")
+    public void captureValidationErrorMessage() {
+        String error = freeListingPage.captureErrorMessage();
+        Assert.assertFalse(error.isEmpty(), "An error message should have appeared for invalid phone");
+        System.out.println("Step 5 | PASS | Error message captured: \"" + error + "\"");
+    }
 
 
 
 
-    // ── TF-33 (SM) : Capture error message ────────────────────────────────
-    // SM pastes @Test method here
 
     // ── TF-34 (KC) : Navigate back to homepage ────────────────────────────
     // KC pastes @Test method here
