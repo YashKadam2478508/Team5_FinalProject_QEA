@@ -32,4 +32,17 @@ public class IndiaMartFreeListingPage extends BasePage {
             System.out.println("  [Form] Mobile input not accessible: " + e.getMessage());
         }
     }
+    public String captureErrorMessage() {
+        try {
+            WebElement errorElement = wait.until(
+                    ExpectedConditions.visibilityOfElementLocated(
+                            By.xpath("//p[@class='newlgnerr']")));
+            String errorMessage = errorElement.getText().trim();
+            System.out.println("  [Form] Error captured: \"" + errorMessage + "\"");
+            return errorMessage;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            System.out.println("  [Form] No error message appeared within wait time.");
+            return "";
+        }
+    }
 }
