@@ -87,7 +87,13 @@ public class TC03_FreeListingFormTest extends BaseTest {
         System.out.println("Step 5 | PASS | Error message captured: \"" + error + "\"");
     }
 
-
+    @Test(priority = 6, dependsOnMethods = "captureValidationErrorMessage")
+    public void navigateBackToHomePage() {
+        freeListingPage.navigateBackToHome();
+        Assert.assertTrue(driver.getTitle().toLowerCase().contains("indiamart"),
+                "Should be back on IndiaMart homepage");
+        System.out.println("Step 6 | PASS | Navigated back to homepage.");
+    }
 
 
 

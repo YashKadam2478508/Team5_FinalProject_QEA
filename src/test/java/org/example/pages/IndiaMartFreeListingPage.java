@@ -45,4 +45,11 @@ public class IndiaMartFreeListingPage extends BasePage {
             return "";
         }
     }
+
+    public void navigateBackToHome() {
+        driver.get("https://www.indiamart.com/");
+        wait.until(d -> js.executeScript("return document.readyState").equals("complete"));
+        System.out.println("  [Nav] Navigated back to IndiaMart homepage. Title: " + driver.getTitle());
+    }
+
 }
