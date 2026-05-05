@@ -71,8 +71,15 @@ public class TC03_FreeListingFormTest extends BaseTest {
         System.out.println("Step 3 | PASS | Free Listing page reached.");
     }
 
-    // ── TF-32 (MS) : Fill form with invalid phone ─────────────────────────
-    // MS pastes @Test method here
+    @Test(priority = 4, dependsOnMethods = "clickFreeListing")
+    public void handleT0901PopupAndEnterMobile() {
+        String invalidPhone = config.getProperty("listing.invalid.phone", "234");
+        freeListingPage.enterInvalidPhone(invalidPhone);
+        System.out.println("Step 4 | PASS | Invalid phone '" + invalidPhone + "' entered.");
+    }
+
+
+
 
     // ── TF-33 (SM) : Capture error message ────────────────────────────────
     // SM pastes @Test method here
