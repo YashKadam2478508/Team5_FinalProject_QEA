@@ -79,4 +79,27 @@ public class BasePage {
         }
         js.executeScript("arguments[0].click();", element);
     }
+
+    // Waits up to 5s for t0901 popup (secondary popup) and closes it
+    protected boolean handleT0901PopupIfAppears() {
+        try {
+            WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(5));
+            WebElement popup = shortWait.until(
+                    ExpectedConditions.visibilityOfElementLocated(
+                            By.xpath("//div[@id='t0901_cls']")));
+            try {
+                popup.click();
+            } catch (ElementClickInterceptedException e) {
+                js.executeScript("arguments[0].click();", popup);
+            }
+            System.out.println("  [Popup] t0901 popup detected and closed.");
+            return true;
+        } catch (TimeoutException e) {
+            System.out.println("  [Popup] t0901 popup did not appear — proceeding.");
+            return false;
+        } catch (Exception e) {
+            System.out.println("  [Popup] t0901 check error — skipping.");
+            return false;
+        }
+    }
 }
