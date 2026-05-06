@@ -19,10 +19,10 @@
     </test>
 
     <!-- Sprint 3: Fitness > Gym Sub-Menu -->
-<!--    <test name="Sprint3 - Fitness Gym Menu">-->
-<!--        <classes>-->
-<!--            <class name="org.example.tests.TC02_FitnessCenterTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Sprint3 - Fitness Gym Menu">
+        <classes>
+            <class name="org.example.tests.TC02_FitnessCenterTest"/>
+        </classes>
+    </test>
 
 </suite>
