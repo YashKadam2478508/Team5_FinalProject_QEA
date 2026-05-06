@@ -60,6 +60,15 @@ public class IndiaMartResultsPage extends BasePage {
         System.out.println("  [Filter] On-site applied.");
     }
 
+    public void applyGymOnlyFilter() {
+        handlePopupIfVisible();
+        WebElement gymOnly = wait.until(
+                ExpectedConditions.elementToBeClickable(
+                        By.xpath("//span[normalize-space()='Gym Only']")));
+        safeClick(gymOnly);
+        wait.until(d -> js.executeScript("return document.readyState").equals("complete"));
+        System.out.println("  [Filter] Gym Only applied.");
+    }
 
     // ── YG's methods (TF-27) : Display ───────────────────────────────────
 

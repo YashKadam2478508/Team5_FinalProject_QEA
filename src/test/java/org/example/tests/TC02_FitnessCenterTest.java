@@ -72,8 +72,23 @@ public class TC02_FitnessCenterTest extends BaseTest {
         System.out.println("Step 3 | PASS | Searched for Fitness Center.");
     }
 
-    // ── TF-38 (MS) ─────────────────────────────────────────────────────
-    // MS pastes @Test priority 4, 5, 6 here
+    @Test(priority = 4, dependsOnMethods = "searchFitnessCenter")
+    public void handlePostSearchPopup() {
+        resultsPage.handlePostSearchPopup();
+        System.out.println("Step 4 | PASS | Post-search popup check complete.");
+    }
+
+    @Test(priority = 5, dependsOnMethods = "handlePostSearchPopup")
+    public void applyChennaiFilter() {
+        resultsPage.applyChennaiFilter();
+        System.out.println("Step 5 | PASS | Chennai-based Suppliers filter applied.");
+    }
+
+    @Test(priority = 6, dependsOnMethods = "applyChennaiFilter")
+    public void applyGymOnlyFilter() {
+        resultsPage.applyGymOnlyFilter();
+        System.out.println("Step 6 | PASS | Gym Only filter applied.");
+    }
 
     // ── TF-39 (YK) ─────────────────────────────────────────────────────
     // YK pastes @Test priority 7 here

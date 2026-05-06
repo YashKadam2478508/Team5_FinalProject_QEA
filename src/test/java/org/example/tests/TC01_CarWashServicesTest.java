@@ -104,7 +104,7 @@ public class TC01_CarWashServicesTest extends BaseTest {
         System.out.println("Step 7 | PASS | Vacuuming filter applied.");
     }
 
-    // ── Step 8 : Apply On-site filter ────────────────────────────────────
+    // ── Step 8 : Apply On-site filter
     @Test(priority = 8, dependsOnMethods = "applyVacuumingFilter")
     public void applyOnsiteFilter() {
         resultsPage.applyOnsiteFilter();
