@@ -92,4 +92,10 @@ public class TC02_FitnessCenterTest extends BaseTest {
 
     // ── TF-39 (YK) ─────────────────────────────────────────────────────
     // YK pastes @Test priority 7 here
+    @Test(priority = 7, dependsOnMethods = "applyGymOnlyFilter")
+    public void displayAllListings() {
+        resultsPage.displayAllListings();
+        System.out.println("Step 7 | PASS | All fitness center listings displayed on console.");
+    }
+
 }
