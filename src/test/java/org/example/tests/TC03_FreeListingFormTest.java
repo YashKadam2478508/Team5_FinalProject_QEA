@@ -4,12 +4,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.example.base.BaseTest;
 import org.example.pages.IndiaMartHomePage;
 import org.example.pages.IndiaMartFreeListingPage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.example.utils.ExtentTestListener;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
@@ -21,10 +18,10 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.Properties;
 
-@Listeners(org.example.utils.ExtentTestListener.class)
+@Listeners(ExtentTestListener.class)
 public class TC03_FreeListingFormTest extends BaseTest {
 
-    private IndiaMartHomePage      homePage;
+    private IndiaMartHomePage        homePage;
     private IndiaMartFreeListingPage freeListingPage;
 
     @Override
@@ -46,15 +43,12 @@ public class TC03_FreeListingFormTest extends BaseTest {
         options.addArguments("--disable-notifications");
         options.addArguments(
                 "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
-                        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36");
+                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36");
 
         driver          = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
         homePage        = new IndiaMartHomePage(driver);
         freeListingPage = new IndiaMartFreeListingPage(driver);
-    }
-    public static WebDriver getDriver(){
-        return driver;
     }
 
     // ── TF-31 (YK) : Navigate to Free Listing ────────────────────────────
@@ -80,18 +74,25 @@ public class TC03_FreeListingFormTest extends BaseTest {
         System.out.println("Step 3 | PASS | Free Listing page reached.");
     }
 
+    // ── TF-32 (MS) : Fill form with invalid phone ─────────────────────────
+
     @Test(priority = 4, dependsOnMethods = "clickFreeListing")
     public void handleT0901PopupAndEnterMobile() {
         String invalidPhone = config.getProperty("listing.invalid.phone", "234");
         freeListingPage.enterInvalidPhone(invalidPhone);
         System.out.println("Step 4 | PASS | Invalid phone '" + invalidPhone + "' entered.");
     }
+
+    // ── TF-33 (SM) : Submit & capture error message ───────────────────────
+
     @Test(priority = 5, dependsOnMethods = "handleT0901PopupAndEnterMobile")
     public void captureValidationErrorMessage() {
         String error = freeListingPage.captureErrorMessage();
         Assert.assertFalse(error.isEmpty(), "An error message should have appeared for invalid phone");
         System.out.println("Step 5 | PASS | Error message captured: \"" + error + "\"");
     }
+
+    // ── TF-34 (KC) : Navigate back to homepage ────────────────────────────
 
     @Test(priority = 6, dependsOnMethods = "captureValidationErrorMessage")
     public void navigateBackToHomePage() {
@@ -100,9 +101,4 @@ public class TC03_FreeListingFormTest extends BaseTest {
                 "Should be back on IndiaMart homepage");
         System.out.println("Step 6 | PASS | Navigated back to homepage.");
     }
-
-
-
-    // ── TF-34 (KC) : Navigate back to homepage ────────────────────────────
-    // KC pastes @Test method here
 }

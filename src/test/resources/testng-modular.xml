@@ -11,12 +11,12 @@
         </classes>
     </test>
 
-    <!-- Sprint 2: Free Listing Form Validation -->
-<!--    <test name="Sprint2 - Free Listing Form">-->
-<!--        <classes>-->
-<!--            <class name="org.example.tests.TC03_FreeListingFormTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!-- Sprint 2: Free Listing Form Validation (ACTIVE) -->
+    <test name="Sprint2 - Free Listing Form">
+        <classes>
+            <class name="org.example.tests.TC03_FreeListingFormTest"/>
+        </classes>
+    </test>
 
     <!-- Sprint 3: Fitness > Gym Sub-Menu -->
 <!--    <test name="Sprint3 - Fitness Gym Menu">-->

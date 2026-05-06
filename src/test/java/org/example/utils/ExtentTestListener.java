@@ -2,7 +2,7 @@ package org.example.utils;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import org.example.tests.TC03_FreeListingFormTest;
+import org.example.base.BaseTest;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
@@ -26,7 +26,7 @@ public class ExtentTestListener implements ITestListener {
 
         // Capture screenshot on failure
         String screenshotPath = ScreenshotUtil.capture(
-                TC03_FreeListingFormTest.getDriver(),
+                BaseTest.getDriver(),
                 result.getMethod().getMethodName());
         ExtentReportManager.getTest().addScreenCaptureFromPath(screenshotPath);
     }
