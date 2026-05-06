@@ -51,8 +51,26 @@ public class TC02_FitnessCenterTest extends BaseTest {
         resultsPage = new IndiaMartResultsPage(driver);
     }
 
-    // ── TF-37 (SM) ─────────────────────────────────────────────────────
-    // SM pastes @Test priority 1, 2, 3 here
+    @Test(priority = 1)
+    public void openIndiaMart() {
+        homePage.openSite();
+        Assert.assertFalse(driver.getTitle().isEmpty(), "Page title should not be empty");
+        System.out.println("Step 1 | PASS | IndiaMart opened.");
+    }
+
+    @Test(priority = 2, dependsOnMethods = "openIndiaMart")
+    public void handleHomePagePopup() {
+        homePage.handlePopup();
+        System.out.println("Step 2 | PASS | Home page popup check complete.");
+    }
+
+    @Test(priority = 3, dependsOnMethods = "handleHomePagePopup")
+    public void searchFitnessCenter() {
+        homePage.search("Fitness Center");
+        Assert.assertTrue(driver.getCurrentUrl().contains("indiamart"),
+                "Should be on IndiaMart search results page");
+        System.out.println("Step 3 | PASS | Searched for Fitness Center.");
+    }
 
     // ── TF-38 (MS) ─────────────────────────────────────────────────────
     // MS pastes @Test priority 4, 5, 6 here
