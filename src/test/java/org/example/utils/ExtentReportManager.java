@@ -15,7 +15,7 @@ public class ExtentReportManager {
             ExtentSparkReporter spark = new ExtentSparkReporter("reports/ExtentReport.html");
             spark.config().setTheme(Theme.DARK);
             spark.config().setDocumentTitle("IndiaMart Automation Report");
-            spark.config().setReportName("Team 5 - Sprint 2 Results");
+            spark.config().setReportName("Team 5 - Sprint 3 Results");
 
             extent = new ExtentReports();
             extent.attachReporter(spark);
