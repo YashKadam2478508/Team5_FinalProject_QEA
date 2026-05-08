@@ -1,4 +1,4 @@
-package org.example.utils;
+package org.example.listeners;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -15,18 +15,18 @@ public class ExtentReportManager {
             ExtentSparkReporter spark = new ExtentSparkReporter("reports/ExtentReport.html");
             spark.config().setTheme(Theme.DARK);
             spark.config().setDocumentTitle("IndiaMart Automation Report");
-            spark.config().setReportName("Team 5 - Sprint 3 Results");
+            spark.config().setReportName("Team 5 - Full Test Suite Results");
 
             extent = new ExtentReports();
             extent.attachReporter(spark);
-            extent.setSystemInfo("Project",  "Team5 Final Project");
-            extent.setSystemInfo("Browser",  "Chrome");
-            extent.setSystemInfo("Sprint",   "Sprint 2 - Free Listing");
+            extent.setSystemInfo("Project", "Team5 Final Project");
+            extent.setSystemInfo("Browser", "Chrome");
+            extent.setSystemInfo("Sprints", "Sprint 1 | Sprint 2 | Sprint 3");
         }
         return extent;
     }
 
-    public static ExtentTest getTest()                    { return testThread.get(); }
-    public static void        setTest(ExtentTest test)    { testThread.set(test); }
-    public static void        flush()                     { if (extent != null) extent.flush(); }
+    public static ExtentTest getTest()                 { return testThread.get(); }
+    public static void        setTest(ExtentTest test) { testThread.set(test); }
+    public static void        flush()                  { if (extent != null) extent.flush(); }
 }

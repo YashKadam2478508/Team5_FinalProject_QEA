@@ -1,0 +1,60 @@
+2026-05-08 12:29:56.842 [INFO ] org.example.tests.TC01_CarWashServicesTest - === TC01 CarWash Services Test — Setup ===
+2026-05-08 12:30:01.054 [INFO ] org.example.tests.TC01_CarWashServicesTest - TC01 setup complete.
+2026-05-08 12:30:01.140 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: openIndiaMart
+2026-05-08 12:30:02.183 [INFO ] org.example.pages.IndiaMartHomePage - Navigating to IndiaMart homepage.
+2026-05-08 12:30:05.765 [INFO ] org.example.pages.IndiaMartHomePage - IndiaMart homepage loaded. Title: IndiaMART - Indian Manufacturers Suppliers Exporters Directory, India Exporter Manufacturer
+2026-05-08 12:30:05.789 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 1 | PASS | IndiaMart opened. Title: IndiaMART - Indian Manufacturers Suppliers Exporters Directory, India Exporter Manufacturer
+2026-05-08 12:30:05.794 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  openIndiaMart
+2026-05-08 12:30:06.634 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\openIndiaMart_20260508_123005.png
+2026-05-08 12:30:06.655 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handleHomePagePopup
+2026-05-08 12:30:06.658 [INFO ] org.example.pages.IndiaMartHomePage - Checking for homepage popup.
+2026-05-08 12:30:14.768 [INFO ] org.example.pages.BasePage - Popup did not appear within 5s — skipping.
+2026-05-08 12:30:14.768 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 2 | PASS | Home page popup check complete.
+2026-05-08 12:30:14.768 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handleHomePagePopup
+2026-05-08 12:30:16.145 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handleHomePagePopup_20260508_123014.png
+2026-05-08 12:30:16.553 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: searchCarWashService
+2026-05-08 12:30:16.569 [INFO ] org.example.pages.IndiaMartHomePage - Searching for: 'Car Wash Service'
+2026-05-08 12:30:20.360 [INFO ] org.example.pages.IndiaMartHomePage - Search complete. Current URL: https://dir.indiamart.com/search.mp?ss=Car+Wash+Service&prdsrc=1&v=4&mcatid=&catid=&crs=xnh-city&trc=xim&cq=Chennai&tags=res:RC2|ktp:N0|stype:attr=1|mtp:S|wc:3|lcf:3|cq:chennai|qr_nm:gl-gd|cs:18595|com-cf:nl|ptrs:na|mc:137331|cat:656|qry_typ:S|lang:en|tyr:1|qrd:260505|mrd:260428|prdt:260508|msf:ls|gli:U0G0I0|gc:Chennai|ic:Chennai|scw:1|emt:9
+2026-05-08 12:30:20.376 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 3 | PASS | Searched for: Car Wash Service
+2026-05-08 12:30:20.378 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  searchCarWashService
+2026-05-08 12:30:20.772 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\searchCarWashService_20260508_123020.png
+2026-05-08 12:30:20.787 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handlePostSearchPopup
+2026-05-08 12:30:20.787 [INFO ] org.example.pages.IndiaMartResultsPage - Checking for post-search popup.
+2026-05-08 12:30:28.818 [INFO ] org.example.pages.BasePage - Popup did not appear within 5s — skipping.
+2026-05-08 12:30:28.818 [INFO ] org.example.pages.IndiaMartResultsPage - Post-search popup check complete.
+2026-05-08 12:30:28.818 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 4 | PASS | Post-search popup check complete.
+2026-05-08 12:30:28.820 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handlePostSearchPopup
+2026-05-08 12:30:29.247 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handlePostSearchPopup_20260508_123028.png
+2026-05-08 12:30:29.263 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: applyChennaiFilter
+2026-05-08 12:30:29.263 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Chennai-based Suppliers filter.
+2026-05-08 12:30:37.748 [INFO ] org.example.pages.IndiaMartResultsPage - Chennai-based Suppliers filter applied.
+2026-05-08 12:30:37.748 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 5 | PASS | Chennai-based Suppliers filter applied.
+2026-05-08 12:30:37.748 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  applyChennaiFilter
+2026-05-08 12:30:38.215 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\applyChennaiFilter_20260508_123037.png
+2026-05-08 12:30:38.215 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: applyFoamWashFilter
+2026-05-08 12:30:38.229 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Foam Wash filter.
+2026-05-08 12:30:47.131 [INFO ] org.example.pages.IndiaMartResultsPage - Foam Wash filter applied.
+2026-05-08 12:30:47.131 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 6 | PASS | Foam Wash filter applied.
+2026-05-08 12:30:47.131 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  applyFoamWashFilter
+2026-05-08 12:30:47.574 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\applyFoamWashFilter_20260508_123047.png
+2026-05-08 12:30:47.574 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: applyVacuumingFilter
+2026-05-08 12:30:47.590 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Vacuuming filter.
+2026-05-08 12:30:56.090 [INFO ] org.example.pages.IndiaMartResultsPage - Vacuuming filter applied.
+2026-05-08 12:30:56.090 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 7 | PASS | Vacuuming filter applied.
+2026-05-08 12:30:56.090 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  applyVacuumingFilter
+2026-05-08 12:30:56.557 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\applyVacuumingFilter_20260508_123056.png
+2026-05-08 12:30:56.557 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: displayTop5CarWashServices
+2026-05-08 12:30:56.603 [INFO ] org.example.pages.IndiaMartResultsPage - ===== CAR WASHING SERVICES IN CHENNAI (TOP 5) =====
+2026-05-08 12:30:56.603 [INFO ] org.example.pages.IndiaMartResultsPage - Displaying 5 of 10 result(s) found.
+2026-05-08 12:30:56.820 [INFO ] org.example.pages.IndiaMartResultsPage - 1. Service: Car Washing Services At Home | Company: Infinity Solutions | Rating: 5 | Location: Chennai
+2026-05-08 12:30:57.061 [INFO ] org.example.pages.IndiaMartResultsPage - 2. Service: Doorstep Car Wash Service | Company: DM Car Care | Rating: 4.7 | Location: Chennai
+2026-05-08 12:30:57.284 [INFO ] org.example.pages.IndiaMartResultsPage - 3. Service: Car Washing Service | Company: Sree Shan Motors | Rating: 3 | Location: Chennai
+2026-05-08 12:30:57.491 [INFO ] org.example.pages.IndiaMartResultsPage - 4. Service: Car And Bike Foam Wash | Company: DP Car Spa | Rating: 5 | Location: Chennai
+2026-05-08 12:30:57.716 [INFO ] org.example.pages.IndiaMartResultsPage - 5. Service: Car Foam Washing Services | Company: Sparkle Car Care | Rating: N/A | Location: Chennai
+2026-05-08 12:30:57.716 [INFO ] org.example.pages.IndiaMartResultsPage - ====================================================
+2026-05-08 12:31:01.585 [INFO ] org.example.utils.ExcelUtil - Excel report saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\test-output\CarWashServices.xlsx
+2026-05-08 12:31:01.629 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 8 | PASS | Top 5 car wash services displayed.
+2026-05-08 12:31:01.629 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  displayTop5CarWashServices
+2026-05-08 12:31:02.258 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\displayTop5CarWashServices_20260508_123101.png
+2026-05-08 12:31:09.176 [INFO ] org.example.base.BaseTest - Browser closed. Test run complete.
+2026-05-08 12:31:09.177 [INFO ] org.example.listeners.ExtentTestListener - All tests finished. Flushing ExtentReport.

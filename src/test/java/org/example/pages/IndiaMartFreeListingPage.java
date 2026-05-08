@@ -1,5 +1,7 @@
 package org.example.pages;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,11 +9,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class IndiaMartFreeListingPage extends BasePage {
 
+    private static final Logger log = LogManager.getLogger(IndiaMartFreeListingPage.class);
+
     public IndiaMartFreeListingPage(WebDriver driver) {
         super(driver);
     }
 
     public void enterInvalidPhone(String phone) {
+        log.info("Attempting to enter invalid phone number: '{}'", phone);
         boolean popupAppeared = handleT0901PopupIfAppears();
 
         try {
@@ -24,32 +29,28 @@ public class IndiaMartFreeListingPage extends BasePage {
             mobileInput.sendKeys(org.openqa.selenium.Keys.ENTER);
 
             if (popupAppeared) {
-                System.out.println("  [Form] t0901 closed. Phone '" + phone + "' entered.");
+                log.info("t0901 popup was closed before input. Phone '{}' entered.", phone);
             } else {
-                System.out.println("  [Form] Phone '" + phone + "' entered directly.");
+                log.info("Phone '{}' entered directly (no popup).", phone);
             }
         } catch (Exception e) {
-            System.out.println("  [Form] Mobile input not accessible: " + e.getMessage());
+            log.error("Mobile input field not accessible: {}", e.getMessage());
         }
     }
+
     public String captureErrorMessage() {
+        log.info("Waiting for validation error message.");
         try {
             WebElement errorElement = wait.until(
                     ExpectedConditions.visibilityOfElementLocated(
                             By.xpath("//p[@class='newlgnerr']")));
             String errorMessage = errorElement.getText().trim();
-            System.out.println("  [Form] Error captured: \"" + errorMessage + "\"");
+            log.info("Validation error captured: \"{}\"", errorMessage);
             return errorMessage;
         } catch (org.openqa.selenium.TimeoutException e) {
-            System.out.println("  [Form] No error message appeared within wait time.");
+            log.warn("No error message appeared within the wait time.");
             return "";
         }
-    }
-
-    public void navigateBackToHome() {
-        driver.get("https://www.indiamart.com/");
-        wait.until(d -> js.executeScript("return document.readyState").equals("complete"));
-        System.out.println("  [Nav] Navigated back to IndiaMart homepage. Title: " + driver.getTitle());
     }
 
 }
