@@ -1,5 +1,7 @@
 package org.example.pages;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,6 +15,8 @@ import java.time.Duration;
 import java.util.List;
 
 public class BasePage {
+
+    private static final Logger log = LogManager.getLogger(BasePage.class);
 
     protected WebDriver driver;
     protected WebDriverWait wait;
@@ -35,11 +39,11 @@ public class BasePage {
             } catch (ElementClickInterceptedException e) {
                 js.executeScript("arguments[0].click();", closeButton);
             }
-            System.out.println("  [Popup] Detected and closed.");
+            log.warn("Popup detected and closed.");
         } catch (TimeoutException e) {
-            System.out.println("  [Popup] Did not appear within 5s — skipping.");
+            log.info("Popup did not appear within 5s — skipping.");
         } catch (Exception e) {
-            System.out.println("  [Popup] Check error — skipping.");
+            log.warn("Popup check encountered an error — skipping. Reason: {}", e.getMessage());
         }
     }
 
@@ -57,7 +61,7 @@ public class BasePage {
                     } catch (ElementClickInterceptedException e) {
                         js.executeScript("arguments[0].click();", closeButton.get(0));
                     }
-                    System.out.println("  [Popup] Detected and closed.");
+                    log.warn("Popup was visible — detected and closed.");
                 }
             }
         } catch (Exception e) { /* popup not present, continue */ }
@@ -72,11 +76,12 @@ public class BasePage {
                 element.click();
                 return;
             } catch (ElementClickInterceptedException e) {
-                System.out.println("  [Click blocked] Dismissing popup and retrying...");
+                log.warn("Click intercepted — dismissing popup and retrying (attempt {}).", attempts + 1);
                 handlePopupIfVisible();
                 attempts++;
             }
         }
+        log.warn("Standard click failed after 3 attempts — using JS click as fallback.");
         js.executeScript("arguments[0].click();", element);
     }
 
@@ -92,13 +97,13 @@ public class BasePage {
             } catch (ElementClickInterceptedException e) {
                 js.executeScript("arguments[0].click();", popup);
             }
-            System.out.println("  [Popup] t0901 popup detected and closed.");
+            log.warn("t0901 popup detected and closed.");
             return true;
         } catch (TimeoutException e) {
-            System.out.println("  [Popup] t0901 popup did not appear — proceeding.");
+            log.info("t0901 popup did not appear — proceeding.");
             return false;
         } catch (Exception e) {
-            System.out.println("  [Popup] t0901 check error — skipping.");
+            log.warn("t0901 popup check error — skipping. Reason: {}", e.getMessage());
             return false;
         }
     }

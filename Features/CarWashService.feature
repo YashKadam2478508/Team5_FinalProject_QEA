@@ -5,7 +5,7 @@ Feature: Car Wash Services Search
 
   Scenario: Display top 5 car wash services with rating above 4 and votes above 20
     Given I am on the IndiaMart home page
-    When I search for "Car Wash" near "Pune"
+    When I search for "Car Wash Service" near "Chennai"
     Then the results page should be displayed
     And I should see at least 5 services with rating above 4 and votes above 20
     And services should be sorted with highest rating on top

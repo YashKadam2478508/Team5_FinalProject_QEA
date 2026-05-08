@@ -18,11 +18,18 @@
         </classes>
     </test>
 
-    <!-- Sprint 3: Fitness > Gym Sub-Menu -->
-<!--    <test name="Sprint3 - Fitness Gym Menu">-->
-<!--        <classes>-->
-<!--            <class name="org.example.tests.TC02_FitnessCenterTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!-- Sprint 3: Fitness Center Search (ACTIVE) -->
+    <test name="Sprint3 - Fitness Gym Menu">
+        <classes>
+            <class name="org.example.tests.TC02_FitnessCenterTest"/>
+        </classes>
+    </test>
+
+    <!-- Cucumber: All Feature Files -->
+    <test name="Cucumber - All Features">
+        <classes>
+            <class name="org.example.runners.CucumberTestRunner"/>
+        </classes>
+    </test>
 
 </suite>
