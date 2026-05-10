@@ -28,7 +28,7 @@ public class BasePage {
         this.js     = (JavascriptExecutor) driver;
     }
 
-    // Waits up to 5s for popup to appear, then closes it
+
     protected void waitAndHandlePopup() {
         try {
             WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -47,7 +47,7 @@ public class BasePage {
         }
     }
 
-    // Instant check — closes popup only if already visible right now
+
     protected void handlePopupIfVisible() {
         try {
             List<WebElement> popupContainer = driver.findElements(
@@ -67,7 +67,7 @@ public class BasePage {
         } catch (Exception e) { /* popup not present, continue */ }
     }
 
-    // Scrolls to element + clicks, retries if popup intercepts
+
     protected void safeClick(WebElement element) {
         js.executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
         int attempts = 0;
@@ -85,7 +85,7 @@ public class BasePage {
         js.executeScript("arguments[0].click();", element);
     }
 
-    // Waits up to 5s for t0901 popup (secondary popup) and closes it
+
     protected boolean handleT0901PopupIfAppears() {
         try {
             WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(5));

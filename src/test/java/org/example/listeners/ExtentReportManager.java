@@ -20,6 +20,7 @@ public class ExtentReportManager {
             extent = new ExtentReports();
             extent.attachReporter(spark);
             extent.setSystemInfo("Project", "Team5 Final Project");
+            extent.setSystemInfo("Developed By", "Yash Kadam, Kishan Chandel, Mayur Shinde, Sarthak Mhase");
             extent.setSystemInfo("Browser", "Chrome");
             extent.setSystemInfo("Sprints", "Sprint 1 | Sprint 2 | Sprint 3");
         }

@@ -22,8 +22,6 @@ public class IndiaMartResultsPage extends BasePage {
         super(driver);
     }
 
-    // ── SM's methods (TF-26) : Filters ───────────────────────────────────
-
     public void handlePostSearchPopup() {
         log.info("Checking for post-search popup.");
         waitAndHandlePopup();
@@ -85,7 +83,6 @@ public class IndiaMartResultsPage extends BasePage {
         log.info("Gym Only filter applied.");
     }
 
-    // ── YG's methods (TF-27) : Display ───────────────────────────────────
 
     public void displayTop5Listings() {
         List<WebElement> cards = driver.findElements(By.cssSelector(".card.brs5"));
@@ -128,8 +125,6 @@ public class IndiaMartResultsPage extends BasePage {
         );
     }
 
-    // ── YK's method (TF-39) : Display ALL Listings ───────────────────────
-
     public void displayAllListings() {
         List<WebElement> cards = driver.findElements(By.cssSelector(".card.brs5"));
         List<String[]>   excelRows = new ArrayList<>();
@@ -171,7 +166,6 @@ public class IndiaMartResultsPage extends BasePage {
         );
     }
 
-    // ── Private helpers ───────────────────────────────────────────────────
 
     private String extractText(WebElement card, String cssSelector) {
         try {
