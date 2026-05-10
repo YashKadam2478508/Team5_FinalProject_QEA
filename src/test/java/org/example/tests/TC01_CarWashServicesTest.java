@@ -42,9 +42,9 @@ public class TC01_CarWashServicesTest extends BaseTest {
         options.addArguments("--start-maximized");
         options.addArguments("--disable-notifications");
 
-        driver      = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
-        homePage    = new IndiaMartHomePage(driver);
+        homePage = new IndiaMartHomePage(driver);
         resultsPage = new IndiaMartResultsPage(driver);
         log.info("TC01 setup complete.");
     }

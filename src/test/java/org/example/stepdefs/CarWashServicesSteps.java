@@ -17,7 +17,6 @@ public class CarWashServicesSteps {
     private IndiaMartHomePage    homePage;
     private IndiaMartResultsPage resultsPage;
 
-    // ── TF-25 steps (KC) ─────────────────────────────────────────────────
 
     @Given("I am on the IndiaMart home page")
     public void iAmOnTheIndiaMartHomePage() {
@@ -35,7 +34,6 @@ public class CarWashServicesSteps {
         resultsPage.handlePostSearchPopup();
     }
 
-    // ── TF-26 steps (SM) ─────────────────────────────────────────────────
 
     @Then("the results page should be displayed")
     public void theResultsPageShouldBeDisplayed() {
@@ -53,7 +51,6 @@ public class CarWashServicesSteps {
         resultsPage.applyVacuumingFilter();
     }
 
-    // ── TF-27 steps (YG) ─────────────────────────────────────────────────
 
     @And("services should be sorted with highest rating on top")
     public void servicesShouldBeSorted() {

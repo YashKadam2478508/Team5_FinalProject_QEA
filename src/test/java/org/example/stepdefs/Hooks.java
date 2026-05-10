@@ -39,10 +39,8 @@ public class Hooks {
     public void tearDown(Scenario scenario) {
         if (driver != null) {
             try {
-                // 1) Save PNG to disk (reports/screenshots/) for archival
                 ScreenshotUtil.capture(driver, scenario.getName().replaceAll("\\s+", "_"));
 
-                // 2) Embed into Cucumber HTML report
                 byte[] png = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
                 scenario.attach(png, "image/png", scenario.getName());
 
