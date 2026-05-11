@@ -49,7 +49,6 @@ public class TC03_FreeListingFormTest extends BaseTest {
         log.info("TC03 setup complete.");
     }
 
-    // ── TF-31 (YK) : Navigate to Free Listing ────────────────────────────
 
     @Test(priority = 1)
     public void openIndiaMart() {
@@ -72,8 +71,6 @@ public class TC03_FreeListingFormTest extends BaseTest {
         log.info("Step 3 | PASS | Free Listing page reached.");
     }
 
-    // ── TF-32 (MS) : Fill form with invalid phone ─────────────────────────
-
     @Test(priority = 4, dependsOnMethods = "clickFreeListing")
     public void handleT0901PopupAndEnterMobile() {
         String invalidPhone = config.getProperty("listing.invalid.phone", "234");
@@ -81,7 +78,6 @@ public class TC03_FreeListingFormTest extends BaseTest {
         log.info("Step 4 | PASS | Invalid phone '{}' entered.", invalidPhone);
     }
 
-    // ── TF-33 (SM) : Submit & capture error message ───────────────────────
 
     @Test(priority = 5, dependsOnMethods = "handleT0901PopupAndEnterMobile")
     public void captureValidationErrorMessage() {

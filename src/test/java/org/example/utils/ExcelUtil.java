@@ -32,7 +32,6 @@ public class ExcelUtil {
 
             Sheet sheet = workbook.createSheet(sheetName);
 
-            // ── Header style ─────────────────────────────────────────────
             CellStyle headerStyle = workbook.createCellStyle();
             Font headerFont = workbook.createFont();
             headerFont.setBold(true);
@@ -42,7 +41,6 @@ public class ExcelUtil {
             headerStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
             headerStyle.setBorderBottom(BorderStyle.THIN);
 
-            // ── Write headers ─────────────────────────────────────────────
             Row headerRow = sheet.createRow(0);
             for (int i = 0; i < headers.length; i++) {
                 Cell cell = headerRow.createCell(i);
@@ -50,7 +48,6 @@ public class ExcelUtil {
                 cell.setCellStyle(headerStyle);
             }
 
-            // ── Write data rows ───────────────────────────────────────────
             for (int i = 0; i < rows.size(); i++) {
                 Row row = sheet.createRow(i + 1);
                 String[] rowData = rows.get(i);
