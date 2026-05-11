@@ -1,23 +1,16 @@
 package org.example.tests;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.base.BaseTest;
 import org.example.listeners.ExtentTestListener;
 import org.example.pages.IndiaMartFreeListingPage;
 import org.example.pages.IndiaMartHomePage;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.example.utils.ConfigReader;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.time.Duration;
-import java.util.Properties;
 
 @Listeners(ExtentTestListener.class)
 public class TC03_FreeListingFormTest extends BaseTest {
@@ -29,61 +22,48 @@ public class TC03_FreeListingFormTest extends BaseTest {
 
     @Override
     @BeforeClass
-    public void setUp() throws IOException {
+    public void setUp() {
+        super.setUp();
         log.info("=== TC03 Free Listing Form Test — Setup ===");
-        config = new Properties();
-        try (FileInputStream fis = new FileInputStream("src/test/resources/config.properties")) {
-            config.load(fis);
-        }
-
-        WebDriverManager.chromedriver().setup();
-
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
-        options.addArguments("--disable-notifications");
-
-        driver          = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
         homePage        = new IndiaMartHomePage(driver);
         freeListingPage = new IndiaMartFreeListingPage(driver);
         log.info("TC03 setup complete.");
     }
 
-
+    // T1 — Is the site up?
     @Test(priority = 1)
-    public void openIndiaMart() {
+    public void verifyIndiaMartLoads() {
         homePage.openSite();
-        Assert.assertFalse(driver.getTitle().isEmpty(), "Page title should not be empty");
-        log.info("Step 1 | PASS | IndiaMart opened.");
-    }
-
-    @Test(priority = 2, dependsOnMethods = "openIndiaMart")
-    public void handleHomePagePopup() {
         homePage.handlePopup();
-        log.info("Step 2 | PASS | Home page popup check complete.");
+
+        String title = driver.getTitle();
+        Assert.assertTrue(title.toLowerCase().contains("indiamart"),
+                "Page title should contain 'IndiaMart' but was: " + title);
+        Assert.assertTrue(driver.getCurrentUrl().contains("indiamart.com"),
+                "URL should be on indiamart.com");
+        log.info("TC03-T1 | PASS | IndiaMart loaded. Title: {}", title);
     }
 
-    @Test(priority = 3, dependsOnMethods = "handleHomePagePopup")
-    public void clickFreeListing() {
+    // T2 — Is the Free Listing page reached?
+    @Test(priority = 2, dependsOnMethods = "verifyIndiaMartLoads")
+    public void verifyFreeListingPageReached() {
         homePage.clickFreeListing();
-        Assert.assertTrue(driver.getCurrentUrl().contains("indiamart"),
-                "Should still be on IndiaMart after clicking Free Listing");
-        log.info("Step 3 | PASS | Free Listing page reached.");
+
+        String currentUrl = driver.getCurrentUrl();
+        Assert.assertTrue(currentUrl.contains("sell") || currentUrl.contains("free-listing"),
+                "Expected Free Listing page URL but was: " + currentUrl);
+        log.info("TC03-T2 | PASS | Free Listing page reached. URL: {}", currentUrl);
     }
 
-    @Test(priority = 4, dependsOnMethods = "clickFreeListing")
-    public void handleT0901PopupAndEnterMobile() {
-        String invalidPhone = config.getProperty("listing.invalid.phone", "234");
+    // T3 — Does invalid phone show a validation error?
+    @Test(priority = 3, dependsOnMethods = "verifyFreeListingPageReached")
+    public void verifyValidationErrorForInvalidPhone() {
+        String invalidPhone = ConfigReader.get("listing.invalid.phone", "234");
         freeListingPage.enterInvalidPhone(invalidPhone);
-        log.info("Step 4 | PASS | Invalid phone '{}' entered.", invalidPhone);
-    }
 
-
-    @Test(priority = 5, dependsOnMethods = "handleT0901PopupAndEnterMobile")
-    public void captureValidationErrorMessage() {
         String error = freeListingPage.captureErrorMessage();
-        Assert.assertFalse(error.isEmpty(), "An error message should have appeared for invalid phone");
-        log.info("Step 5 | PASS | Error message captured: \"{}\"", error);
+        Assert.assertFalse(error.isEmpty(),
+                "Expected a validation error message for invalid phone '" + invalidPhone + "' but got none");
+        log.info("TC03-T3 | PASS | Validation error captured: \"{}\"", error);
     }
-
 }
