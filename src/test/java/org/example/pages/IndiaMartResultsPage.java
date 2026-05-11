@@ -18,6 +18,19 @@ public class IndiaMartResultsPage extends BasePage {
     private static final String[] LISTING_HEADERS = {"#", "Service Name", "Company Name", "Rating", "Location"};
     private static final int      MAX_RECORDS     = 5;
 
+
+    private static final By CHENNAI_FILTER   = By.xpath("//input[@id='Chennai-based Suppliersid']");
+    private static final By FOAM_WASH_FILTER = By.xpath("//span[normalize-space()='Foam Wash']");
+    private static final By VACUUMING_FILTER = By.xpath("//span[normalize-space()='Vacuuming']");
+    private static final By ONSITE_FILTER    = By.xpath("//span[normalize-space()='On-site']");
+    private static final By GYM_ONLY_FILTER  = By.xpath("//span[normalize-space()='Gym Only']");
+
+    private static final By LISTING_CARD     = By.cssSelector(".card.brs5");
+    private static final By CARD_SERVICE     = By.cssSelector(".producttitle a.cardlinks");
+    private static final By CARD_COMPANY     = By.cssSelector(".companyname a.cardlinks");
+    private static final By CARD_LOCATION    = By.cssSelector(".highlight");
+    private static final String CARD_RATING_ATTR = "data-rating";
+
     public IndiaMartResultsPage(WebDriver driver) {
         super(driver);
     }
@@ -31,9 +44,7 @@ public class IndiaMartResultsPage extends BasePage {
     public void applyChennaiFilter() {
         log.info("Applying Chennai-based Suppliers filter.");
         handlePopupIfVisible();
-        WebElement checkbox = wait.until(
-                ExpectedConditions.presenceOfElementLocated(
-                        By.xpath("//input[@id='Chennai-based Suppliersid']")));
+        WebElement checkbox = wait.until(ExpectedConditions.presenceOfElementLocated(CHENNAI_FILTER));
         safeClick(checkbox);
         wait.until(d -> js.executeScript("return document.readyState").equals("complete"));
         log.info("Chennai-based Suppliers filter applied.");
@@ -42,9 +53,7 @@ public class IndiaMartResultsPage extends BasePage {
     public void applyFoamWashFilter() {
         log.info("Applying Foam Wash filter.");
         handlePopupIfVisible();
-        WebElement foamWash = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.xpath("//span[normalize-space()='Foam Wash']")));
+        WebElement foamWash = wait.until(ExpectedConditions.elementToBeClickable(FOAM_WASH_FILTER));
         safeClick(foamWash);
         wait.until(d -> js.executeScript("return document.readyState").equals("complete"));
         log.info("Foam Wash filter applied.");
@@ -53,9 +62,7 @@ public class IndiaMartResultsPage extends BasePage {
     public void applyVacuumingFilter() {
         log.info("Applying Vacuuming filter.");
         handlePopupIfVisible();
-        WebElement vacuuming = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.xpath("//span[normalize-space()='Vacuuming']")));
+        WebElement vacuuming = wait.until(ExpectedConditions.elementToBeClickable(VACUUMING_FILTER));
         safeClick(vacuuming);
         wait.until(d -> js.executeScript("return document.readyState").equals("complete"));
         log.info("Vacuuming filter applied.");
@@ -64,9 +71,7 @@ public class IndiaMartResultsPage extends BasePage {
     public void applyOnsiteFilter() {
         log.info("Applying On-site filter.");
         handlePopupIfVisible();
-        WebElement onsite = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.xpath("//span[normalize-space()='On-site']")));
+        WebElement onsite = wait.until(ExpectedConditions.elementToBeClickable(ONSITE_FILTER));
         safeClick(onsite);
         wait.until(d -> js.executeScript("return document.readyState").equals("complete"));
         log.info("On-site filter applied.");
@@ -75,20 +80,28 @@ public class IndiaMartResultsPage extends BasePage {
     public void applyGymOnlyFilter() {
         log.info("Applying Gym Only filter.");
         handlePopupIfVisible();
-        WebElement gymOnly = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.xpath("//span[normalize-space()='Gym Only']")));
+        WebElement gymOnly = wait.until(ExpectedConditions.elementToBeClickable(GYM_ONLY_FILTER));
         safeClick(gymOnly);
         wait.until(d -> js.executeScript("return document.readyState").equals("complete"));
         log.info("Gym Only filter applied.");
     }
 
-
     public void displayTop5Listings() {
-        List<WebElement> cards = driver.findElements(By.cssSelector(".card.brs5"));
+        collectAndExport("CAR WASHING SERVICES IN CHENNAI",
+                "test-output/CarWashServices.xlsx", "Car Wash Services");
+    }
+
+    public void displayAllListings() {
+        collectAndExport("FITNESS CENTERS IN CHENNAI - GYM ONLY",
+                "test-output/FitnessCenter.xlsx", "Fitness Centers");
+    }
+
+
+    private void collectAndExport(String banner, String excelPath, String sheetName) {
+        List<WebElement> cards = driver.findElements(LISTING_CARD);
         List<String[]>   excelRows = new ArrayList<>();
 
-        log.info("===== CAR WASHING SERVICES IN CHENNAI (TOP {}) =====", MAX_RECORDS);
+        log.info("===== {} (TOP {}) =====", banner, MAX_RECORDS);
 
         if (cards.isEmpty()) {
             log.warn("No results found. URL: {}", driver.getCurrentUrl());
@@ -98,10 +111,10 @@ public class IndiaMartResultsPage extends BasePage {
 
             for (int i = 0; i < count; i++) {
                 try {
-                    String serviceName = extractText(cards.get(i), ".producttitle a.cardlinks");
-                    String companyName = extractText(cards.get(i), ".companyname a.cardlinks");
-                    String rating      = extractAttr(cards.get(i), "data-rating");
-                    String location    = extractText(cards.get(i), ".highlight");
+                    String serviceName = extractText(cards.get(i), CARD_SERVICE);
+                    String companyName = extractText(cards.get(i), CARD_COMPANY);
+                    String rating      = extractAttr(cards.get(i), CARD_RATING_ATTR);
+                    String location    = extractText(cards.get(i), CARD_LOCATION);
 
                     log.info("{}. Service: {} | Company: {} | Rating: {} | Location: {}",
                             i + 1, serviceName, companyName, rating, location);
@@ -117,59 +130,12 @@ public class IndiaMartResultsPage extends BasePage {
         }
 
         log.info("====================================================");
-        ExcelUtil.writeListings(
-                "test-output/CarWashServices.xlsx",
-                "Car Wash Services",
-                LISTING_HEADERS,
-                excelRows
-        );
+        ExcelUtil.writeListings(excelPath, sheetName, LISTING_HEADERS, excelRows);
     }
 
-    public void displayAllListings() {
-        List<WebElement> cards = driver.findElements(By.cssSelector(".card.brs5"));
-        List<String[]>   excelRows = new ArrayList<>();
-
-        log.info("===== FITNESS CENTERS IN CHENNAI - GYM ONLY (TOP {}) =====", MAX_RECORDS);
-
-        if (cards.isEmpty()) {
-            log.warn("No results found. URL: {}", driver.getCurrentUrl());
-        } else {
-            int count = Math.min(MAX_RECORDS, cards.size());
-            log.info("Displaying {} of {} result(s) found.", count, cards.size());
-
-            for (int i = 0; i < count; i++) {
-                try {
-                    String serviceName = extractText(cards.get(i), ".producttitle a.cardlinks");
-                    String companyName = extractText(cards.get(i), ".companyname a.cardlinks");
-                    String rating      = extractAttr(cards.get(i), "data-rating");
-                    String location    = extractText(cards.get(i), ".highlight");
-
-                    log.info("{}. Service: {} | Company: {} | Rating: {} | Location: {}",
-                            i + 1, serviceName, companyName, rating, location);
-
-                    excelRows.add(new String[]{
-                            String.valueOf(i + 1), serviceName, companyName, rating, location
-                    });
-
-                } catch (Exception e) {
-                    log.error("Error reading card {}: {}", i + 1, e.getMessage());
-                }
-            }
-        }
-
-        log.info("==========================================================");
-        ExcelUtil.writeListings(
-                "test-output/FitnessCenter.xlsx",
-                "Fitness Centers",
-                LISTING_HEADERS,
-                excelRows
-        );
-    }
-
-
-    private String extractText(WebElement card, String cssSelector) {
+    private String extractText(WebElement card, By locator) {
         try {
-            String text = card.findElement(By.cssSelector(cssSelector)).getText().trim();
+            String text = card.findElement(locator).getText().trim();
             return text.isEmpty() ? "N/A" : text;
         } catch (Exception e) {
             return "N/A";

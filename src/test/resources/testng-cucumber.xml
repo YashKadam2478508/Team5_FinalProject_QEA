@@ -8,5 +8,4 @@
             <class name="org.example.runners.CucumberTestRunner"/>
         </classes>
     </test>
-
 </suite>
