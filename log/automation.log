@@ -1,174 +1,179 @@
-2026-05-10 16:53:46.423 [INFO ] org.example.tests.TC01_CarWashServicesTest - === TC01 CarWash Services Test — Setup ===
-2026-05-10 16:53:53.939 [INFO ] org.example.tests.TC01_CarWashServicesTest - TC01 setup complete.
-2026-05-10 16:53:54.050 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: openIndiaMart
-2026-05-10 16:53:55.542 [INFO ] org.example.pages.IndiaMartHomePage - Navigating to IndiaMart homepage.
-2026-05-10 16:54:04.886 [INFO ] org.example.pages.IndiaMartHomePage - IndiaMart homepage loaded. Title: IndiaMART - Indian Manufacturers Suppliers Exporters Directory, India Exporter Manufacturer
-2026-05-10 16:54:04.928 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 1 | PASS | IndiaMart opened. Title: IndiaMART - Indian Manufacturers Suppliers Exporters Directory, India Exporter Manufacturer
-2026-05-10 16:54:04.942 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  openIndiaMart
-2026-05-10 16:54:05.933 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\openIndiaMart_20260510_165404.png
-2026-05-10 16:54:05.957 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handleHomePagePopup
-2026-05-10 16:54:05.966 [INFO ] org.example.pages.IndiaMartHomePage - Checking for homepage popup.
-2026-05-10 16:54:14.067 [INFO ] org.example.pages.BasePage - Popup did not appear within 5s — skipping.
-2026-05-10 16:54:14.067 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 2 | PASS | Home page popup check complete.
-2026-05-10 16:54:14.069 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handleHomePagePopup
-2026-05-10 16:54:14.873 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handleHomePagePopup_20260510_165414.png
-2026-05-10 16:54:14.885 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: searchCarWashService
-2026-05-10 16:54:14.887 [INFO ] org.example.pages.IndiaMartHomePage - Searching for: 'Car Wash Service'
-2026-05-10 16:54:21.915 [INFO ] org.example.pages.IndiaMartHomePage - Search complete. Current URL: https://dir.indiamart.com/search.mp?ss=Car+Wash+Service&prdsrc=1&v=4&mcatid=&catid=&crs=xnh-city&trc=xim&cq=Chennai&tags=res:RC2|ktp:N0|stype:attr=1|mtp:S|wc:3|lcf:3|cq:chennai|qr_nm:gl-gd|cs:18592|com-cf:nl|ptrs:na|mc:137331|cat:656|qry_typ:S|lang:en|tyr:1|qrd:260509|mrd:260428|prdt:260510|msf:ls|gli:U0G0I0|gc:Chennai|ic:Chennai|scw:1|emt:9
-2026-05-10 16:54:21.949 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 3 | PASS | Searched for: Car Wash Service
-2026-05-10 16:54:21.954 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  searchCarWashService
-2026-05-10 16:54:22.443 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\searchCarWashService_20260510_165421.png
-2026-05-10 16:54:22.452 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handlePostSearchPopup
-2026-05-10 16:54:22.452 [INFO ] org.example.pages.IndiaMartResultsPage - Checking for post-search popup.
-2026-05-10 16:54:26.832 [WARN ] org.example.pages.BasePage - Popup detected and closed.
-2026-05-10 16:54:26.832 [INFO ] org.example.pages.IndiaMartResultsPage - Post-search popup check complete.
-2026-05-10 16:54:26.832 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 4 | PASS | Post-search popup check complete.
-2026-05-10 16:54:26.834 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handlePostSearchPopup
-2026-05-10 16:54:27.596 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handlePostSearchPopup_20260510_165426.png
-2026-05-10 16:54:27.605 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: applyChennaiFilter
-2026-05-10 16:54:27.605 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Chennai-based Suppliers filter.
-2026-05-10 16:54:36.091 [INFO ] org.example.pages.IndiaMartResultsPage - Chennai-based Suppliers filter applied.
-2026-05-10 16:54:36.093 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 5 | PASS | Chennai-based Suppliers filter applied.
-2026-05-10 16:54:36.095 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  applyChennaiFilter
-2026-05-10 16:54:36.567 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\applyChennaiFilter_20260510_165436.png
-2026-05-10 16:54:36.567 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: applyFoamWashFilter
-2026-05-10 16:54:36.575 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Foam Wash filter.
-2026-05-10 16:54:45.111 [INFO ] org.example.pages.IndiaMartResultsPage - Foam Wash filter applied.
-2026-05-10 16:54:45.111 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 6 | PASS | Foam Wash filter applied.
-2026-05-10 16:54:45.115 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  applyFoamWashFilter
-2026-05-10 16:54:45.544 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\applyFoamWashFilter_20260510_165445.png
-2026-05-10 16:54:45.551 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: applyVacuumingFilter
-2026-05-10 16:54:45.554 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Vacuuming filter.
-2026-05-10 16:54:54.199 [INFO ] org.example.pages.IndiaMartResultsPage - Vacuuming filter applied.
-2026-05-10 16:54:54.199 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 7 | PASS | Vacuuming filter applied.
-2026-05-10 16:54:54.199 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  applyVacuumingFilter
-2026-05-10 16:54:54.883 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\applyVacuumingFilter_20260510_165454.png
-2026-05-10 16:54:54.903 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: displayTop5CarWashServices
-2026-05-10 16:54:54.949 [INFO ] org.example.pages.IndiaMartResultsPage - ===== CAR WASHING SERVICES IN CHENNAI (TOP 5) =====
-2026-05-10 16:54:54.949 [INFO ] org.example.pages.IndiaMartResultsPage - Displaying 5 of 10 result(s) found.
-2026-05-10 16:54:55.293 [INFO ] org.example.pages.IndiaMartResultsPage - 1. Service: Car Washing Service | Company: DM Car Care | Rating: 4.7 | Location: Chennai
-2026-05-10 16:54:55.489 [INFO ] org.example.pages.IndiaMartResultsPage - 2. Service: Car Washing Services At Home | Company: Infinity Solutions | Rating: 5 | Location: Chennai
-2026-05-10 16:54:55.721 [INFO ] org.example.pages.IndiaMartResultsPage - 3. Service: Car Washing Service | Company: Sree Shan Motors | Rating: 3 | Location: Chennai
-2026-05-10 16:54:55.941 [INFO ] org.example.pages.IndiaMartResultsPage - 4. Service: Car And Bike Foam Wash | Company: DP Car Spa | Rating: 5 | Location: Chennai
-2026-05-10 16:54:56.167 [INFO ] org.example.pages.IndiaMartResultsPage - 5. Service: Car Foam Washing Services | Company: Sparkle Car Care | Rating: N/A | Location: Chennai
-2026-05-10 16:54:56.167 [INFO ] org.example.pages.IndiaMartResultsPage - ====================================================
-2026-05-10 16:55:00.103 [INFO ] org.example.utils.ExcelUtil - Excel report saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\test-output\CarWashServices.xlsx
-2026-05-10 16:55:00.119 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 8 | PASS | Top 5 car wash services displayed.
-2026-05-10 16:55:00.135 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  displayTop5CarWashServices
-2026-05-10 16:55:00.669 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\displayTop5CarWashServices_20260510_165500.png
-2026-05-10 16:55:08.781 [INFO ] org.example.base.BaseTest - Browser closed. Test run complete.
-2026-05-10 16:55:08.781 [INFO ] org.example.listeners.ExtentTestListener - All tests finished. Flushing ExtentReport.
-2026-05-10 16:55:09.458 [INFO ] org.example.tests.TC03_FreeListingFormTest - === TC03 Free Listing Form Test — Setup ===
-2026-05-10 16:55:13.388 [INFO ] org.example.tests.TC03_FreeListingFormTest - TC03 setup complete.
-2026-05-10 16:55:13.390 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: openIndiaMart
-2026-05-10 16:55:13.404 [INFO ] org.example.pages.IndiaMartHomePage - Navigating to IndiaMart homepage.
-2026-05-10 16:55:22.283 [INFO ] org.example.pages.IndiaMartHomePage - IndiaMart homepage loaded. Title: IndiaMART - Indian Manufacturers Suppliers Exporters Directory, India Exporter Manufacturer
-2026-05-10 16:55:22.301 [INFO ] org.example.tests.TC03_FreeListingFormTest - Step 1 | PASS | IndiaMart opened.
-2026-05-10 16:55:22.301 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  openIndiaMart
-2026-05-10 16:55:23.102 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\openIndiaMart_20260510_165522.png
-2026-05-10 16:55:23.105 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handleHomePagePopup
-2026-05-10 16:55:23.111 [INFO ] org.example.pages.IndiaMartHomePage - Checking for homepage popup.
-2026-05-10 16:55:31.222 [INFO ] org.example.pages.BasePage - Popup did not appear within 5s — skipping.
-2026-05-10 16:55:31.222 [INFO ] org.example.tests.TC03_FreeListingFormTest - Step 2 | PASS | Home page popup check complete.
-2026-05-10 16:55:31.222 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handleHomePagePopup
-2026-05-10 16:55:31.963 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handleHomePagePopup_20260510_165531.png
-2026-05-10 16:55:31.963 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: clickFreeListing
-2026-05-10 16:55:31.963 [INFO ] org.example.pages.IndiaMartHomePage - Clicking Free Listing button.
-2026-05-10 16:55:50.594 [INFO ] org.example.pages.IndiaMartHomePage - Navigated to Free Listing page. URL: https://seller.indiamart.com/
-2026-05-10 16:55:50.610 [INFO ] org.example.tests.TC03_FreeListingFormTest - Step 3 | PASS | Free Listing page reached.
-2026-05-10 16:55:50.610 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  clickFreeListing
-2026-05-10 16:55:50.875 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\clickFreeListing_20260510_165550.png
-2026-05-10 16:55:50.881 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handleT0901PopupAndEnterMobile
-2026-05-10 16:55:50.883 [INFO ] org.example.pages.IndiaMartFreeListingPage - Attempting to enter invalid phone number: '2357'
-2026-05-10 16:55:56.168 [INFO ] org.example.pages.BasePage - t0901 popup did not appear — proceeding.
-2026-05-10 16:55:56.990 [INFO ] org.example.pages.IndiaMartFreeListingPage - Phone '2357' entered directly (no popup).
-2026-05-10 16:55:56.990 [INFO ] org.example.tests.TC03_FreeListingFormTest - Step 4 | PASS | Invalid phone '2357' entered.
-2026-05-10 16:55:56.991 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handleT0901PopupAndEnterMobile
-2026-05-10 16:55:57.400 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handleT0901PopupAndEnterMobile_20260510_165556.png
-2026-05-10 16:55:57.403 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: captureValidationErrorMessage
-2026-05-10 16:55:57.404 [INFO ] org.example.pages.IndiaMartFreeListingPage - Waiting for validation error message.
-2026-05-10 16:55:57.522 [INFO ] org.example.pages.IndiaMartFreeListingPage - Validation error captured: "Please enter a valid 10 digit mobile number"
-2026-05-10 16:55:57.522 [INFO ] org.example.tests.TC03_FreeListingFormTest - Step 5 | PASS | Error message captured: "Please enter a valid 10 digit mobile number"
-2026-05-10 16:55:57.523 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  captureValidationErrorMessage
-2026-05-10 16:55:57.833 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\captureValidationErrorMessage_20260510_165557.png
-2026-05-10 16:56:04.807 [INFO ] org.example.base.BaseTest - Browser closed. Test run complete.
-2026-05-10 16:56:04.807 [INFO ] org.example.listeners.ExtentTestListener - All tests finished. Flushing ExtentReport.
-2026-05-10 16:56:04.862 [INFO ] org.example.tests.TC02_FitnessCenterTest - === TC02 Fitness Center Test — Setup ===
-2026-05-10 16:56:07.989 [INFO ] org.example.tests.TC02_FitnessCenterTest - TC02 setup complete.
-2026-05-10 16:56:07.996 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: openIndiaMart
-2026-05-10 16:56:07.998 [INFO ] org.example.pages.IndiaMartHomePage - Navigating to IndiaMart homepage.
-2026-05-10 16:56:21.042 [INFO ] org.example.pages.IndiaMartHomePage - IndiaMart homepage loaded. Title: IndiaMART - Indian Manufacturers Suppliers Exporters Directory, India Exporter Manufacturer
-2026-05-10 16:56:21.060 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 1 | PASS | IndiaMart opened.
-2026-05-10 16:56:21.060 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  openIndiaMart
-2026-05-10 16:56:21.994 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\openIndiaMart_20260510_165621.png
-2026-05-10 16:56:22.008 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handleHomePagePopup
-2026-05-10 16:56:22.011 [INFO ] org.example.pages.IndiaMartHomePage - Checking for homepage popup.
-2026-05-10 16:56:30.041 [INFO ] org.example.pages.BasePage - Popup did not appear within 5s — skipping.
-2026-05-10 16:56:30.041 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 2 | PASS | Home page popup check complete.
-2026-05-10 16:56:30.041 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handleHomePagePopup
-2026-05-10 16:56:30.931 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handleHomePagePopup_20260510_165630.png
-2026-05-10 16:56:30.936 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: searchFitnessCenter
-2026-05-10 16:56:30.939 [INFO ] org.example.pages.IndiaMartHomePage - Searching for: 'Fitness Center'
-2026-05-10 16:56:48.859 [INFO ] org.example.pages.IndiaMartHomePage - Search complete. Current URL: https://dir.indiamart.com/search.mp?ss=Fitness+Center&prdsrc=1&v=4&mcatid=&catid=&crs=xnh-city&trc=xim&cq=Chennai&tags=res:RC1-R5|ktp:N0|stype:attr=1|mtp:S|wc:2|lcf:3|cq:chennai|qr_nm:localhgmct-gl-gd|cs:19758|com-cf:nl|ptrs:na|mc:28446|cat:283|qry_typ:S|lang:en|tyr:1|qrd:260506|mrd:260428|prdt:260510|msf:ls|gli:U0G0I0|gc:Chennai|ic:Chennai|scw:1|emt:3
-2026-05-10 16:56:48.877 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 3 | PASS | Searched for Fitness Center.
-2026-05-10 16:56:48.877 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  searchFitnessCenter
-2026-05-10 16:56:49.290 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\searchFitnessCenter_20260510_165648.png
-2026-05-10 16:56:49.305 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handlePostSearchPopup
-2026-05-10 16:56:49.305 [INFO ] org.example.pages.IndiaMartResultsPage - Checking for post-search popup.
-2026-05-10 16:56:53.301 [WARN ] org.example.pages.BasePage - Popup detected and closed.
-2026-05-10 16:56:53.301 [INFO ] org.example.pages.IndiaMartResultsPage - Post-search popup check complete.
-2026-05-10 16:56:53.301 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 4 | PASS | Post-search popup check complete.
-2026-05-10 16:56:53.301 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handlePostSearchPopup
-2026-05-10 16:56:53.817 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handlePostSearchPopup_20260510_165653.png
-2026-05-10 16:56:53.817 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: applyChennaiFilter
-2026-05-10 16:56:53.833 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Chennai-based Suppliers filter.
-2026-05-10 16:57:02.515 [INFO ] org.example.pages.IndiaMartResultsPage - Chennai-based Suppliers filter applied.
-2026-05-10 16:57:02.524 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 5 | PASS | Chennai-based Suppliers filter applied.
-2026-05-10 16:57:02.524 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  applyChennaiFilter
-2026-05-10 16:57:03.010 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\applyChennaiFilter_20260510_165702.png
-2026-05-10 16:57:03.010 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: applyGymOnlyFilter
-2026-05-10 16:57:03.010 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Gym Only filter.
-2026-05-10 16:57:11.519 [INFO ] org.example.pages.IndiaMartResultsPage - Gym Only filter applied.
-2026-05-10 16:57:11.521 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 6 | PASS | Gym Only filter applied.
-2026-05-10 16:57:11.521 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  applyGymOnlyFilter
-2026-05-10 16:57:11.847 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\applyGymOnlyFilter_20260510_165711.png
-2026-05-10 16:57:11.856 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: displayAllListings
-2026-05-10 16:57:19.931 [INFO ] org.example.pages.IndiaMartResultsPage - ===== FITNESS CENTERS IN CHENNAI - GYM ONLY (TOP 5) =====
-2026-05-10 16:57:19.963 [WARN ] org.example.pages.IndiaMartResultsPage - No results found. URL: https://dir.indiamart.com/search.mp?ss=fitness+center&v=4&mcatid=&catid=&cq=chennai&city_only=true&q-Club+Type=Gym+Only&src=advanced-filter&tags=res:RC1-R5|ktp:N0|stype:attr=1|mtp:S|emr:1|wc:4|lcf:3|cq:chennai|qr_nm:emg-gl-gd|cs:20359|com-cf:nl|ptrs:na|mc:28446|erc:2|cat:283|qry_typ:S|msc:1|lang:en|tyr:1|qrd:260508|mrd:260508|prdt:260510|msf:ls|gli:U0G0I0|gc:Chennai|ic:Chennai|scw:1|emt:0
-2026-05-10 16:57:19.963 [INFO ] org.example.pages.IndiaMartResultsPage - ==========================================================
-2026-05-10 16:57:20.059 [INFO ] org.example.utils.ExcelUtil - Excel report saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\test-output\FitnessCenter.xlsx
-2026-05-10 16:57:20.075 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 7 | PASS | All fitness center listings displayed on console.
-2026-05-10 16:57:20.075 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  displayAllListings
-2026-05-10 16:57:20.523 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\displayAllListings_20260510_165720.png
-2026-05-10 16:57:28.464 [INFO ] org.example.base.BaseTest - Browser closed. Test run complete.
-2026-05-10 16:57:28.464 [INFO ] org.example.listeners.ExtentTestListener - All tests finished. Flushing ExtentReport.
-2026-05-10 16:57:29.369 [INFO ] org.example.stepdefs.Hooks - Starting browser for Cucumber scenario.
-2026-05-10 16:57:32.382 [INFO ] org.example.stepdefs.Hooks - Browser launched successfully.
-2026-05-10 16:57:32.399 [INFO ] org.example.stepdefs.CarWashServicesSteps - Step: Opening IndiaMart home page.
-2026-05-10 16:57:32.399 [INFO ] org.example.pages.IndiaMartHomePage - Navigating to IndiaMart homepage.
-2026-05-10 16:57:41.042 [INFO ] org.example.pages.IndiaMartHomePage - IndiaMart homepage loaded. Title: IndiaMART - Indian Manufacturers Suppliers Exporters Directory, India Exporter Manufacturer
-2026-05-10 16:57:41.042 [INFO ] org.example.pages.IndiaMartHomePage - Checking for homepage popup.
-2026-05-10 16:57:49.065 [INFO ] org.example.pages.BasePage - Popup did not appear within 5s — skipping.
-2026-05-10 16:57:49.076 [INFO ] org.example.stepdefs.CarWashServicesSteps - Step: Searching for 'Car Wash Service' near 'Chennai'.
-2026-05-10 16:57:49.076 [INFO ] org.example.pages.IndiaMartHomePage - Searching for: 'Car Wash Service'
-2026-05-10 16:58:01.425 [INFO ] org.example.pages.IndiaMartHomePage - Search complete. Current URL: https://dir.indiamart.com/search.mp?ss=Car+Wash+Service&prdsrc=1&v=4&mcatid=&catid=&crs=xnh-city&trc=xim&cq=Chennai&tags=res:RC2|ktp:N0|stype:attr=1|mtp:S|wc:3|lcf:3|cq:chennai|qr_nm:gl-gd|cs:18592|com-cf:nl|ptrs:na|mc:137331|cat:656|qry_typ:S|lang:en|tyr:1|qrd:260509|mrd:260428|prdt:260510|msf:ls|gli:U0G0I0|gc:Chennai|ic:Chennai|scw:1|emt:9
-2026-05-10 16:58:01.428 [INFO ] org.example.pages.IndiaMartResultsPage - Checking for post-search popup.
-2026-05-10 16:58:06.002 [WARN ] org.example.pages.BasePage - Popup detected and closed.
-2026-05-10 16:58:06.002 [INFO ] org.example.pages.IndiaMartResultsPage - Post-search popup check complete.
-2026-05-10 16:58:06.021 [INFO ] org.example.stepdefs.CarWashServicesSteps - Step: Verifying results page. URL: https://dir.indiamart.com/search.mp?ss=Car+Wash+Service&prdsrc=1&v=4&mcatid=&catid=&crs=xnh-city&trc=xim&cq=Chennai&tags=res:RC2|ktp:N0|stype:attr=1|mtp:S|wc:3|lcf:3|cq:chennai|qr_nm:gl-gd|cs:18592|com-cf:nl|ptrs:na|mc:137331|cat:656|qry_typ:S|lang:en|tyr:1|qrd:260509|mrd:260428|prdt:260510|msf:ls|gli:U0G0I0|gc:Chennai|ic:Chennai|scw:1|emt:9
-2026-05-10 16:58:06.023 [INFO ] org.example.stepdefs.CarWashServicesSteps - Step: Applying service filters.
-2026-05-10 16:58:06.023 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Chennai-based Suppliers filter.
-2026-05-10 16:58:14.812 [INFO ] org.example.pages.IndiaMartResultsPage - Chennai-based Suppliers filter applied.
-2026-05-10 16:58:14.812 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Foam Wash filter.
-2026-05-10 16:58:23.489 [INFO ] org.example.pages.IndiaMartResultsPage - Foam Wash filter applied.
-2026-05-10 16:58:23.489 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Vacuuming filter.
-2026-05-10 16:58:32.117 [INFO ] org.example.pages.IndiaMartResultsPage - Vacuuming filter applied.
-2026-05-10 16:58:32.119 [INFO ] org.example.stepdefs.CarWashServicesSteps - Step: Results sorted by IndiaMart platform — no action required.
-2026-05-10 16:58:32.119 [INFO ] org.example.stepdefs.CarWashServicesSteps - Step: Displaying top 5 listings.
-2026-05-10 16:58:40.179 [INFO ] org.example.pages.IndiaMartResultsPage - ===== CAR WASHING SERVICES IN CHENNAI (TOP 5) =====
-2026-05-10 16:58:40.194 [WARN ] org.example.pages.IndiaMartResultsPage - No results found. URL: https://dir.indiamart.com/search.mp?ss=car+wash+service&v=4&mcatid=&catid=&cq=chennai&city_only=true&q-Type+Of+Cleaning=Foam+Wash&src=advanced-filter&q-Interior+Cleaning+Provided=Vacuuming&tags=res:RC2|ktp:N0|stype:attr=1|mtp:S|emr:0|wc:6|lcf:3|cq:chennai|qr_nm:emg-gl-gd|cs:19921|com-cf:nl|ptrs:na|mc:137331|erc:0|cat:656|qry_typ:S|lang:en|tyr:1|qrd:260505|mrd:260428|prdt:260510|msf:ls|gli:U0G0I0|gc:Chennai|ic:Chennai|scw:1|emt:0
-2026-05-10 16:58:40.194 [INFO ] org.example.pages.IndiaMartResultsPage - ====================================================
-2026-05-10 16:58:40.290 [INFO ] org.example.utils.ExcelUtil - Excel report saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\test-output\CarWashServices.xlsx
-2026-05-10 16:58:40.857 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\Display_top_5_car_wash_services_with_rating_above_4_and_votes_above_20_20260510_165840.png
-2026-05-10 16:58:41.456 [INFO ] org.example.stepdefs.Hooks - Scenario PASSED: 'Display top 5 car wash services with rating above 4 and votes above 20' — screenshot attached.
-2026-05-10 16:58:48.507 [INFO ] org.example.stepdefs.Hooks - Browser closed after scenario.
+2026-05-11 10:21:31.054 [INFO ] org.example.tests.TC01_CarWashServicesTest - === TC01 CarWash Services Test — Setup ===
+2026-05-11 10:21:35.374 [INFO ] org.example.tests.TC01_CarWashServicesTest - TC01 setup complete.
+2026-05-11 10:21:35.413 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: openIndiaMart
+2026-05-11 10:21:36.110 [INFO ] org.example.pages.IndiaMartHomePage - Navigating to IndiaMart homepage.
+2026-05-11 10:21:42.026 [INFO ] org.example.pages.IndiaMartHomePage - IndiaMart homepage loaded. Title: IndiaMART - Indian Manufacturers Suppliers Exporters Directory, India Exporter Manufacturer
+2026-05-11 10:21:42.043 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 1 | PASS | IndiaMart opened. Title: IndiaMART - Indian Manufacturers Suppliers Exporters Directory, India Exporter Manufacturer
+2026-05-11 10:21:42.053 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  openIndiaMart
+2026-05-11 10:21:42.671 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\openIndiaMart_20260511_102142.png
+2026-05-11 10:21:42.702 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handleHomePagePopup
+2026-05-11 10:21:42.704 [INFO ] org.example.pages.IndiaMartHomePage - Checking for homepage popup.
+2026-05-11 10:21:50.744 [INFO ] org.example.pages.BasePage - Popup did not appear within 5s — skipping.
+2026-05-11 10:21:50.744 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 2 | PASS | Home page popup check complete.
+2026-05-11 10:21:50.747 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handleHomePagePopup
+2026-05-11 10:21:51.241 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handleHomePagePopup_20260511_102150.png
+2026-05-11 10:21:51.246 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: searchCarWashService
+2026-05-11 10:21:51.246 [INFO ] org.example.pages.IndiaMartHomePage - Searching for: 'Car Wash Service'
+2026-05-11 10:21:56.774 [INFO ] org.example.pages.IndiaMartHomePage - Search complete. Current URL: https://dir.indiamart.com/search.mp?ss=Car+Wash+Service&prdsrc=1&v=4&mcatid=&catid=&crs=xnh-city&trc=xim&cq=Chennai&tags=res:RC2|ktp:N0|stype:attr=1|mtp:S|wc:3|lcf:3|cq:chennai|qr_nm:gl-gd|cs:18592|com-cf:nl|ptrs:na|mc:137331|cat:656|qry_typ:S|lang:en|tyr:1|qrd:260509|mrd:260428|prdt:260510|msf:ls|gli:U0G0I0|gc:Chennai|ic:Chennai|scw:1|emt:9
+2026-05-11 10:21:56.786 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 3 | PASS | Searched for: Car Wash Service
+2026-05-11 10:21:56.787 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  searchCarWashService
+2026-05-11 10:21:57.116 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\searchCarWashService_20260511_102156.png
+2026-05-11 10:21:57.116 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handlePostSearchPopup
+2026-05-11 10:21:57.116 [INFO ] org.example.pages.IndiaMartResultsPage - Checking for post-search popup.
+2026-05-11 10:22:01.025 [WARN ] org.example.pages.BasePage - Popup detected and closed.
+2026-05-11 10:22:01.027 [INFO ] org.example.pages.IndiaMartResultsPage - Post-search popup check complete.
+2026-05-11 10:22:01.027 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 4 | PASS | Post-search popup check complete.
+2026-05-11 10:22:01.029 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handlePostSearchPopup
+2026-05-11 10:22:01.366 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handlePostSearchPopup_20260511_102201.png
+2026-05-11 10:22:01.370 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: applyChennaiFilter
+2026-05-11 10:22:01.370 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Chennai-based Suppliers filter.
+2026-05-11 10:22:09.563 [INFO ] org.example.pages.IndiaMartResultsPage - Chennai-based Suppliers filter applied.
+2026-05-11 10:22:09.564 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 5 | PASS | Chennai-based Suppliers filter applied.
+2026-05-11 10:22:09.565 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  applyChennaiFilter
+2026-05-11 10:22:09.875 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\applyChennaiFilter_20260511_102209.png
+2026-05-11 10:22:09.879 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: applyFoamWashFilter
+2026-05-11 10:22:09.881 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Foam Wash filter.
+2026-05-11 10:22:18.071 [INFO ] org.example.pages.IndiaMartResultsPage - Foam Wash filter applied.
+2026-05-11 10:22:18.071 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 6 | PASS | Foam Wash filter applied.
+2026-05-11 10:22:18.072 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  applyFoamWashFilter
+2026-05-11 10:22:18.336 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\applyFoamWashFilter_20260511_102218.png
+2026-05-11 10:22:18.336 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: applyVacuumingFilter
+2026-05-11 10:22:18.350 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Vacuuming filter.
+2026-05-11 10:22:26.671 [INFO ] org.example.pages.IndiaMartResultsPage - Vacuuming filter applied.
+2026-05-11 10:22:26.671 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 7 | PASS | Vacuuming filter applied.
+2026-05-11 10:22:26.673 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  applyVacuumingFilter
+2026-05-11 10:22:27.016 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\applyVacuumingFilter_20260511_102226.png
+2026-05-11 10:22:27.020 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: displayTop5CarWashServices
+2026-05-11 10:22:35.085 [INFO ] org.example.pages.IndiaMartResultsPage - ===== CAR WASHING SERVICES IN CHENNAI (TOP 5) =====
+2026-05-11 10:22:35.117 [WARN ] org.example.pages.IndiaMartResultsPage - No results found. URL: https://dir.indiamart.com/search.mp?ss=car+wash+service&v=4&mcatid=&catid=&cq=chennai&city_only=true&q-Type+Of+Cleaning=Foam+Wash&src=advanced-filter&q-Interior+Cleaning+Provided=Vacuuming&tags=res:RC2|ktp:N0|stype:attr=1|mtp:S|emr:0|wc:6|lcf:3|cq:chennai|qr_nm:emg-gl-gd|cs:19921|com-cf:nl|ptrs:na|mc:137331|erc:0|cat:656|qry_typ:S|lang:en|tyr:1|qrd:260505|mrd:260428|prdt:260510|msf:ls|gli:U0G0I0|gc:Chennai|ic:Chennai|scw:1|emt:0
+2026-05-11 10:22:35.117 [INFO ] org.example.pages.IndiaMartResultsPage - ====================================================
+2026-05-11 10:22:37.456 [INFO ] org.example.utils.ExcelUtil - Excel report saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\test-output\CarWashServices.xlsx
+2026-05-11 10:22:37.472 [INFO ] org.example.tests.TC01_CarWashServicesTest - Step 8 | PASS | Top 5 car wash services displayed.
+2026-05-11 10:22:37.472 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  displayTop5CarWashServices
+2026-05-11 10:22:37.790 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\displayTop5CarWashServices_20260511_102237.png
+2026-05-11 10:22:43.560 [INFO ] org.example.base.BaseTest - Browser closed. Test run complete.
+2026-05-11 10:22:43.560 [INFO ] org.example.listeners.ExtentTestListener - All tests finished. Flushing ExtentReport.
+2026-05-11 10:22:43.791 [INFO ] org.example.tests.TC03_FreeListingFormTest - === TC03 Free Listing Form Test — Setup ===
+2026-05-11 10:22:45.594 [INFO ] org.example.tests.TC03_FreeListingFormTest - TC03 setup complete.
+2026-05-11 10:22:45.594 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: openIndiaMart
+2026-05-11 10:22:45.599 [INFO ] org.example.pages.IndiaMartHomePage - Navigating to IndiaMart homepage.
+2026-05-11 10:22:47.654 [INFO ] org.example.pages.IndiaMartHomePage - IndiaMart homepage loaded. Title: IndiaMART - Indian Manufacturers Suppliers Exporters Directory, India Exporter Manufacturer
+2026-05-11 10:22:47.669 [INFO ] org.example.tests.TC03_FreeListingFormTest - Step 1 | PASS | IndiaMart opened.
+2026-05-11 10:22:47.669 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  openIndiaMart
+2026-05-11 10:22:48.175 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\openIndiaMart_20260511_102247.png
+2026-05-11 10:22:48.182 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handleHomePagePopup
+2026-05-11 10:22:48.184 [INFO ] org.example.pages.IndiaMartHomePage - Checking for homepage popup.
+2026-05-11 10:22:56.212 [INFO ] org.example.pages.BasePage - Popup did not appear within 5s — skipping.
+2026-05-11 10:22:56.212 [INFO ] org.example.tests.TC03_FreeListingFormTest - Step 2 | PASS | Home page popup check complete.
+2026-05-11 10:22:56.212 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handleHomePagePopup
+2026-05-11 10:22:56.712 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handleHomePagePopup_20260511_102256.png
+2026-05-11 10:22:56.729 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: clickFreeListing
+2026-05-11 10:22:56.729 [INFO ] org.example.pages.IndiaMartHomePage - Clicking Free Listing button.
+2026-05-11 10:23:07.400 [INFO ] org.example.pages.IndiaMartHomePage - Navigated to Free Listing page. URL: https://seller.indiamart.com/
+2026-05-11 10:23:07.451 [INFO ] org.example.tests.TC03_FreeListingFormTest - Step 3 | PASS | Free Listing page reached.
+2026-05-11 10:23:07.452 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  clickFreeListing
+2026-05-11 10:23:07.553 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\clickFreeListing_20260511_102307.png
+2026-05-11 10:23:07.553 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handleT0901PopupAndEnterMobile
+2026-05-11 10:23:07.553 [INFO ] org.example.pages.IndiaMartFreeListingPage - Attempting to enter invalid phone number: '2357'
+2026-05-11 10:23:12.822 [INFO ] org.example.pages.BasePage - t0901 popup did not appear — proceeding.
+2026-05-11 10:23:13.193 [INFO ] org.example.pages.IndiaMartFreeListingPage - Phone '2357' entered directly (no popup).
+2026-05-11 10:23:13.193 [INFO ] org.example.tests.TC03_FreeListingFormTest - Step 4 | PASS | Invalid phone '2357' entered.
+2026-05-11 10:23:13.193 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handleT0901PopupAndEnterMobile
+2026-05-11 10:23:13.362 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handleT0901PopupAndEnterMobile_20260511_102313.png
+2026-05-11 10:23:13.369 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: captureValidationErrorMessage
+2026-05-11 10:23:13.369 [INFO ] org.example.pages.IndiaMartFreeListingPage - Waiting for validation error message.
+2026-05-11 10:23:13.458 [INFO ] org.example.pages.IndiaMartFreeListingPage - Validation error captured: "Please enter a valid 10 digit mobile number"
+2026-05-11 10:23:13.458 [INFO ] org.example.tests.TC03_FreeListingFormTest - Step 5 | PASS | Error message captured: "Please enter a valid 10 digit mobile number"
+2026-05-11 10:23:13.458 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  captureValidationErrorMessage
+2026-05-11 10:23:13.613 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\captureValidationErrorMessage_20260511_102313.png
+2026-05-11 10:23:19.764 [INFO ] org.example.base.BaseTest - Browser closed. Test run complete.
+2026-05-11 10:23:19.765 [INFO ] org.example.listeners.ExtentTestListener - All tests finished. Flushing ExtentReport.
+2026-05-11 10:23:19.784 [INFO ] org.example.tests.TC02_FitnessCenterTest - === TC02 Fitness Center Test — Setup ===
+2026-05-11 10:23:21.624 [INFO ] org.example.tests.TC02_FitnessCenterTest - TC02 setup complete.
+2026-05-11 10:23:21.626 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: openIndiaMart
+2026-05-11 10:23:21.626 [INFO ] org.example.pages.IndiaMartHomePage - Navigating to IndiaMart homepage.
+2026-05-11 10:23:23.244 [INFO ] org.example.pages.IndiaMartHomePage - IndiaMart homepage loaded. Title: IndiaMART - Indian Manufacturers Suppliers Exporters Directory, India Exporter Manufacturer
+2026-05-11 10:23:23.260 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 1 | PASS | IndiaMart opened.
+2026-05-11 10:23:23.261 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  openIndiaMart
+2026-05-11 10:23:23.743 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\openIndiaMart_20260511_102323.png
+2026-05-11 10:23:23.745 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handleHomePagePopup
+2026-05-11 10:23:23.747 [INFO ] org.example.pages.IndiaMartHomePage - Checking for homepage popup.
+2026-05-11 10:23:31.749 [INFO ] org.example.pages.BasePage - Popup did not appear within 5s — skipping.
+2026-05-11 10:23:31.765 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 2 | PASS | Home page popup check complete.
+2026-05-11 10:23:31.765 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handleHomePagePopup
+2026-05-11 10:23:32.178 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handleHomePagePopup_20260511_102331.png
+2026-05-11 10:23:32.195 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: searchFitnessCenter
+2026-05-11 10:23:32.195 [INFO ] org.example.pages.IndiaMartHomePage - Searching for: 'Fitness Center'
+2026-05-11 10:23:34.661 [INFO ] org.example.pages.IndiaMartHomePage - Search complete. Current URL: https://dir.indiamart.com/search.mp?ss=Fitness+Center&prdsrc=1&v=4&mcatid=&catid=&crs=xnh-city&trc=xim&cq=Chennai&tags=res:RC1-R5|ktp:N0|stype:attr=1|mtp:S|wc:2|lcf:3|cq:chennai|qr_nm:localhgmct-gl-gd|cs:19758|com-cf:nl|ptrs:na|mc:28446|cat:283|qry_typ:S|lang:en|tyr:1|qrd:260506|mrd:260428|prdt:260510|msf:ls|gli:U0G0I0|gc:Chennai|ic:Chennai|scw:1|emt:3
+2026-05-11 10:23:34.665 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 3 | PASS | Searched for Fitness Center.
+2026-05-11 10:23:34.665 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  searchFitnessCenter
+2026-05-11 10:23:34.882 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\searchFitnessCenter_20260511_102334.png
+2026-05-11 10:23:34.899 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: handlePostSearchPopup
+2026-05-11 10:23:34.901 [INFO ] org.example.pages.IndiaMartResultsPage - Checking for post-search popup.
+2026-05-11 10:23:38.893 [WARN ] org.example.pages.BasePage - Popup detected and closed.
+2026-05-11 10:23:38.893 [INFO ] org.example.pages.IndiaMartResultsPage - Post-search popup check complete.
+2026-05-11 10:23:38.893 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 4 | PASS | Post-search popup check complete.
+2026-05-11 10:23:38.897 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  handlePostSearchPopup
+2026-05-11 10:23:39.145 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\handlePostSearchPopup_20260511_102338.png
+2026-05-11 10:23:39.145 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: applyChennaiFilter
+2026-05-11 10:23:39.145 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Chennai-based Suppliers filter.
+2026-05-11 10:23:47.363 [INFO ] org.example.pages.IndiaMartResultsPage - Chennai-based Suppliers filter applied.
+2026-05-11 10:23:47.364 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 5 | PASS | Chennai-based Suppliers filter applied.
+2026-05-11 10:23:47.365 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  applyChennaiFilter
+2026-05-11 10:23:47.611 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\applyChennaiFilter_20260511_102347.png
+2026-05-11 10:23:47.614 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: applyGymOnlyFilter
+2026-05-11 10:23:47.614 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Gym Only filter.
+2026-05-11 10:23:55.881 [INFO ] org.example.pages.IndiaMartResultsPage - Gym Only filter applied.
+2026-05-11 10:23:55.881 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 6 | PASS | Gym Only filter applied.
+2026-05-11 10:23:55.881 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  applyGymOnlyFilter
+2026-05-11 10:23:56.119 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\applyGymOnlyFilter_20260511_102355.png
+2026-05-11 10:23:56.123 [INFO ] org.example.listeners.ExtentTestListener - TEST STARTED: displayAllListings
+2026-05-11 10:23:56.145 [INFO ] org.example.pages.IndiaMartResultsPage - ===== FITNESS CENTERS IN CHENNAI - GYM ONLY (TOP 5) =====
+2026-05-11 10:23:56.145 [INFO ] org.example.pages.IndiaMartResultsPage - Displaying 5 of 5 result(s) found.
+2026-05-11 10:23:56.282 [INFO ] org.example.pages.IndiaMartResultsPage - 1. Service: Gym Fitness Club | Company: Corporate Culprits Club | Rating: N/A | Location: Chennai
+2026-05-11 10:23:56.457 [INFO ] org.example.pages.IndiaMartResultsPage - 2. Service: Gym-Fitness Centre | Company: SKS Foundation India Private Limited | Rating: N/A | Location: Chennai
+2026-05-11 10:23:56.558 [INFO ] org.example.pages.IndiaMartResultsPage - 3. Service: Fitness Center Services | Company: 7D Health Plus Fitness Studios | Rating: N/A | Location: Chennai
+2026-05-11 10:23:56.637 [INFO ] org.example.pages.IndiaMartResultsPage - 4. Service: Fitness Center Services | Company: SSJ Medicare | Rating: N/A | Location: Chennai
+2026-05-11 10:23:56.721 [INFO ] org.example.pages.IndiaMartResultsPage - 5. Service: Fitness Center | Company: Flash Properietor Mathangi R | Rating: N/A | Location: Chennai
+2026-05-11 10:23:56.721 [INFO ] org.example.pages.IndiaMartResultsPage - ====================================================
+2026-05-11 10:23:56.824 [INFO ] org.example.utils.ExcelUtil - Excel report saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\test-output\FitnessCenter.xlsx
+2026-05-11 10:23:56.836 [INFO ] org.example.tests.TC02_FitnessCenterTest - Step 7 | PASS | All fitness center listings displayed on console.
+2026-05-11 10:23:56.836 [INFO ] org.example.listeners.ExtentTestListener - TEST PASSED:  displayAllListings
+2026-05-11 10:23:57.054 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\displayAllListings_20260511_102356.png
+2026-05-11 10:24:02.788 [INFO ] org.example.base.BaseTest - Browser closed. Test run complete.
+2026-05-11 10:24:02.789 [INFO ] org.example.listeners.ExtentTestListener - All tests finished. Flushing ExtentReport.
+2026-05-11 10:24:03.206 [INFO ] org.example.stepdefs.Hooks - Starting browser for Cucumber scenario.
+2026-05-11 10:24:05.054 [INFO ] org.example.stepdefs.Hooks - Browser launched successfully.
+2026-05-11 10:24:05.069 [INFO ] org.example.stepdefs.CarWashServicesSteps - Step: Opening IndiaMart home page.
+2026-05-11 10:24:05.069 [INFO ] org.example.pages.IndiaMartHomePage - Navigating to IndiaMart homepage.
+2026-05-11 10:24:06.965 [INFO ] org.example.pages.IndiaMartHomePage - IndiaMart homepage loaded. Title: IndiaMART - Indian Manufacturers Suppliers Exporters Directory, India Exporter Manufacturer
+2026-05-11 10:24:06.965 [INFO ] org.example.pages.IndiaMartHomePage - Checking for homepage popup.
+2026-05-11 10:24:14.998 [INFO ] org.example.pages.BasePage - Popup did not appear within 5s — skipping.
+2026-05-11 10:24:15.014 [INFO ] org.example.stepdefs.CarWashServicesSteps - Step: Searching for 'Car Wash Service' near 'Chennai'.
+2026-05-11 10:24:15.014 [INFO ] org.example.pages.IndiaMartHomePage - Searching for: 'Car Wash Service'
+2026-05-11 10:24:17.217 [INFO ] org.example.pages.IndiaMartHomePage - Search complete. Current URL: https://dir.indiamart.com/search.mp?ss=Car+Wash+Service&prdsrc=1&v=4&mcatid=&catid=&crs=xnh-city&trc=xim&cq=Chennai&tags=res:RC2|ktp:N0|stype:attr=1|mtp:S|wc:3|lcf:3|cq:chennai|qr_nm:gl-gd|cs:18592|com-cf:nl|ptrs:na|mc:137331|cat:656|qry_typ:S|lang:en|tyr:1|qrd:260509|mrd:260428|prdt:260510|msf:ls|gli:U0G0I0|gc:Chennai|ic:Chennai|scw:1|emt:9
+2026-05-11 10:24:17.217 [INFO ] org.example.pages.IndiaMartResultsPage - Checking for post-search popup.
+2026-05-11 10:24:21.596 [WARN ] org.example.pages.BasePage - Popup detected and closed.
+2026-05-11 10:24:21.596 [INFO ] org.example.pages.IndiaMartResultsPage - Post-search popup check complete.
+2026-05-11 10:24:21.609 [INFO ] org.example.stepdefs.CarWashServicesSteps - Step: Verifying results page. URL: https://dir.indiamart.com/search.mp?ss=Car+Wash+Service&prdsrc=1&v=4&mcatid=&catid=&crs=xnh-city&trc=xim&cq=Chennai&tags=res:RC2|ktp:N0|stype:attr=1|mtp:S|wc:3|lcf:3|cq:chennai|qr_nm:gl-gd|cs:18592|com-cf:nl|ptrs:na|mc:137331|cat:656|qry_typ:S|lang:en|tyr:1|qrd:260509|mrd:260428|prdt:260510|msf:ls|gli:U0G0I0|gc:Chennai|ic:Chennai|scw:1|emt:9
+2026-05-11 10:24:21.610 [INFO ] org.example.stepdefs.CarWashServicesSteps - Step: Applying service filters.
+2026-05-11 10:24:21.611 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Chennai-based Suppliers filter.
+2026-05-11 10:24:29.810 [INFO ] org.example.pages.IndiaMartResultsPage - Chennai-based Suppliers filter applied.
+2026-05-11 10:24:29.811 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Foam Wash filter.
+2026-05-11 10:24:38.091 [INFO ] org.example.pages.IndiaMartResultsPage - Foam Wash filter applied.
+2026-05-11 10:24:38.091 [INFO ] org.example.pages.IndiaMartResultsPage - Applying Vacuuming filter.
+2026-05-11 10:24:46.431 [INFO ] org.example.pages.IndiaMartResultsPage - Vacuuming filter applied.
+2026-05-11 10:24:46.433 [INFO ] org.example.stepdefs.CarWashServicesSteps - Step: Results sorted by IndiaMart platform — no action required.
+2026-05-11 10:24:46.434 [INFO ] org.example.stepdefs.CarWashServicesSteps - Step: Displaying top 5 listings.
+2026-05-11 10:24:46.459 [INFO ] org.example.pages.IndiaMartResultsPage - ===== CAR WASHING SERVICES IN CHENNAI (TOP 5) =====
+2026-05-11 10:24:46.460 [INFO ] org.example.pages.IndiaMartResultsPage - Displaying 5 of 10 result(s) found.
+2026-05-11 10:24:46.654 [INFO ] org.example.pages.IndiaMartResultsPage - 1. Service: Car Washing Service | Company: DM Car Care | Rating: 4.7 | Location: Chennai
+2026-05-11 10:24:46.814 [INFO ] org.example.pages.IndiaMartResultsPage - 2. Service: Car Washing Services At Home | Company: Infinity Solutions | Rating: 5 | Location: Chennai
+2026-05-11 10:24:46.909 [INFO ] org.example.pages.IndiaMartResultsPage - 3. Service: Car Washing Service | Company: Sree Shan Motors | Rating: 3 | Location: Chennai
+2026-05-11 10:24:47.069 [INFO ] org.example.pages.IndiaMartResultsPage - 4. Service: Car And Bike Foam Wash | Company: DP Car Spa | Rating: 5 | Location: Chennai
+2026-05-11 10:24:47.212 [INFO ] org.example.pages.IndiaMartResultsPage - 5. Service: Car Foam Washing Services | Company: Sparkle Car Care | Rating: N/A | Location: Chennai
+2026-05-11 10:24:47.212 [INFO ] org.example.pages.IndiaMartResultsPage - ====================================================
+2026-05-11 10:24:47.275 [INFO ] org.example.utils.ExcelUtil - Excel report saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\test-output\CarWashServices.xlsx
+2026-05-11 10:24:47.553 [INFO ] org.example.utils.ScreenshotUtil - Screenshot saved: C:\Users\2478508\IdeaProjects\Team5_FinalProject_QEA\reports\screenshots\Display_top_5_car_wash_services_with_rating_above_4_and_votes_above_20_20260511_102447.png
+2026-05-11 10:24:47.835 [INFO ] org.example.stepdefs.Hooks - Scenario PASSED: 'Display top 5 car wash services with rating above 4 and votes above 20' — screenshot attached.
+2026-05-11 10:24:53.335 [INFO ] org.example.stepdefs.Hooks - Browser closed after scenario.

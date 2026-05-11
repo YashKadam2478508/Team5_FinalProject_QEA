@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <!-- Modular suite: each test class opens its own browser -->
-<suite name="IndiaMart - Modular Test Suite" verbose="1">
+<suite name="IndiaMart - Modular Test Suite" verbose="1" >
 
     <!-- Sprint 1: Car Wash Services (ACTIVE) -->
     <test name="Sprint1 - Car Wash Services">
@@ -25,7 +25,7 @@
         </classes>
     </test>
 
-    <!-- Cucumber: All Feature Files -->
+<!--     Cucumber: All Feature Files -->
     <test name="Cucumber - All Features">
         <classes>
             <class name="org.example.runners.CucumberTestRunner"/>

@@ -18,10 +18,9 @@ public class BasePage {
 
     private static final Logger log = LogManager.getLogger(BasePage.class);
 
-    // ── Shared Locators ──────────────────────────────────────────────────
-    protected static final By POPUP_CLOSE_BTN  = By.xpath("//a[@id='idfpclose']");
-    protected static final By POPUP_CONTAINER  = By.xpath("//div[@id='identyfy_usr_ctl']");
-    protected static final By T0901_POPUP      = By.xpath("//div[@id='t0901_cls']");
+    private static final By POPUP_CLOSE_BTN = By.xpath("//a[@id='idfpclose']");
+    private static final By POPUP_CONTAINER = By.xpath("//div[@id='identyfy_usr_ctl']");
+    private static final By T0901_POPUP     = By.xpath("//div[@id='t0901_cls']");
 
     protected WebDriver driver;
     protected WebDriverWait wait;
@@ -32,7 +31,6 @@ public class BasePage {
         this.wait   = new WebDriverWait(driver, Duration.ofSeconds(15));
         this.js     = (JavascriptExecutor) driver;
     }
-
 
     protected void waitAndHandlePopup() {
         try {
@@ -51,7 +49,6 @@ public class BasePage {
             log.warn("Popup check encountered an error — skipping. Reason: {}", e.getMessage());
         }
     }
-
 
     protected void handlePopupIfVisible() {
         try {
@@ -87,7 +84,6 @@ public class BasePage {
         log.warn("Standard click failed after 3 attempts — using JS click as fallback.");
         js.executeScript("arguments[0].click();", element);
     }
-
 
     protected boolean handleT0901PopupIfAppears() {
         try {

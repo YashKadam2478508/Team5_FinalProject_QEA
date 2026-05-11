@@ -49,7 +49,6 @@ public class TC02_FitnessCenterTest extends BaseTest {
         log.info("TC02 setup complete.");
     }
 
-    // ── TF-37 (SM) ───────────────────────────────────────────────────────
 
     @Test(priority = 1)
     public void openIndiaMart() {
@@ -72,8 +71,6 @@ public class TC02_FitnessCenterTest extends BaseTest {
         log.info("Step 3 | PASS | Searched for Fitness Center.");
     }
 
-    // ── TF-38 (MS) ───────────────────────────────────────────────────────
-
     @Test(priority = 4, dependsOnMethods = "searchFitnessCenter")
     public void handlePostSearchPopup() {
         resultsPage.handlePostSearchPopup();
@@ -92,7 +89,6 @@ public class TC02_FitnessCenterTest extends BaseTest {
         log.info("Step 6 | PASS | Gym Only filter applied.");
     }
 
-    // ── TF-39 (YK) ───────────────────────────────────────────────────────
 
     @Test(priority = 7, dependsOnMethods = "applyGymOnlyFilter")
     public void displayAllListings() {
