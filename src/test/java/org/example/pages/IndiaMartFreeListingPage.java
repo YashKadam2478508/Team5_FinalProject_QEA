@@ -11,6 +11,9 @@ public class IndiaMartFreeListingPage extends BasePage {
 
     private static final Logger log = LogManager.getLogger(IndiaMartFreeListingPage.class);
 
+    private static final By MOBILE_INPUT  = By.xpath("//input[@id='mobNo']");
+    private static final By ERROR_MESSAGE = By.xpath("//p[@class='newlgnerr']");
+
     public IndiaMartFreeListingPage(WebDriver driver) {
         super(driver);
     }
@@ -20,9 +23,7 @@ public class IndiaMartFreeListingPage extends BasePage {
         boolean popupAppeared = handleT0901PopupIfAppears();
 
         try {
-            WebElement mobileInput = wait.until(
-                    ExpectedConditions.elementToBeClickable(
-                            By.xpath("//input[@id='mobNo']")));
+            WebElement mobileInput = wait.until(ExpectedConditions.elementToBeClickable(MOBILE_INPUT));
             mobileInput.click();
             mobileInput.clear();
             mobileInput.sendKeys(phone);
@@ -41,9 +42,7 @@ public class IndiaMartFreeListingPage extends BasePage {
     public String captureErrorMessage() {
         log.info("Waiting for validation error message.");
         try {
-            WebElement errorElement = wait.until(
-                    ExpectedConditions.visibilityOfElementLocated(
-                            By.xpath("//p[@class='newlgnerr']")));
+            WebElement errorElement = wait.until(ExpectedConditions.visibilityOfElementLocated(ERROR_MESSAGE));
             String errorMessage = errorElement.getText().trim();
             log.info("Validation error captured: \"{}\"", errorMessage);
             return errorMessage;
@@ -52,5 +51,4 @@ public class IndiaMartFreeListingPage extends BasePage {
             return "";
         }
     }
-
 }

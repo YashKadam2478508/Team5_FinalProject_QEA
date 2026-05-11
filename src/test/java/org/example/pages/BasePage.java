@@ -18,6 +18,11 @@ public class BasePage {
 
     private static final Logger log = LogManager.getLogger(BasePage.class);
 
+    // ── Shared Locators ──────────────────────────────────────────────────
+    protected static final By POPUP_CLOSE_BTN  = By.xpath("//a[@id='idfpclose']");
+    protected static final By POPUP_CONTAINER  = By.xpath("//div[@id='identyfy_usr_ctl']");
+    protected static final By T0901_POPUP      = By.xpath("//div[@id='t0901_cls']");
+
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected JavascriptExecutor js;
@@ -33,7 +38,7 @@ public class BasePage {
         try {
             WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(5));
             WebElement closeButton = shortWait.until(
-                    ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='idfpclose']")));
+                    ExpectedConditions.elementToBeClickable(POPUP_CLOSE_BTN));
             try {
                 closeButton.click();
             } catch (ElementClickInterceptedException e) {
@@ -50,11 +55,9 @@ public class BasePage {
 
     protected void handlePopupIfVisible() {
         try {
-            List<WebElement> popupContainer = driver.findElements(
-                    By.xpath("//div[@id='identyfy_usr_ctl']"));
+            List<WebElement> popupContainer = driver.findElements(POPUP_CONTAINER);
             if (!popupContainer.isEmpty() && popupContainer.get(0).isDisplayed()) {
-                List<WebElement> closeButton = driver.findElements(
-                        By.xpath("//a[@id='idfpclose']"));
+                List<WebElement> closeButton = driver.findElements(POPUP_CLOSE_BTN);
                 if (!closeButton.isEmpty()) {
                     try {
                         closeButton.get(0).click();
@@ -90,8 +93,7 @@ public class BasePage {
         try {
             WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(5));
             WebElement popup = shortWait.until(
-                    ExpectedConditions.visibilityOfElementLocated(
-                            By.xpath("//div[@id='t0901_cls']")));
+                    ExpectedConditions.visibilityOfElementLocated(T0901_POPUP));
             try {
                 popup.click();
             } catch (ElementClickInterceptedException e) {
